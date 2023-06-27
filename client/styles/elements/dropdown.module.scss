@@ -1,0 +1,96 @@
+@media (min-width: 769px) {
+.container {
+   
+    min-width: 64px;
+}
+
+.mainTab {
+    
+    padding: 16px 32px;
+    width: 112px;
+}
+}
+
+.container {
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+
+}
+.mainTab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    text-align: center;
+    width: auto;
+    font-size: 23px;
+font-family: Roboto;
+
+}
+}
+
+
+.hide {
+    display: none;
+}
+
+.mainTab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 144px;
+    
+    text-align: center;
+    
+    font-size: 23px;
+font-family: Roboto;
+}
+
+.links {
+    text-align: center;
+}
+
+.link {
+    font-size: 15px;
+font-family: Roboto;
+}
+
+.activeLink {
+    color: var(--primary-light-p-20, #006A3A);
+    font-size: 15px;
+font-family: Roboto;
+cursor: default;
+
+}
+
+.link:hover {
+    cursor: pointer;
+    
+}
+
+
+.showDropdown{
+    position: absolute;
+    border: 1px solid #000000;
+    border-radius: 4px 4px 8px 8px;
+    background-color: white;
+    border-top: unset;
+    box-shadow: 2px 4px 4px 2px #0000004a;
+
+
+}
+
+.activeLink, .link{
+    border-bottom: 1px solid #000000;
+    min-width: 144px;
+
+}
+
+
+.hideDropdown {
+    display: none;
+}
+
