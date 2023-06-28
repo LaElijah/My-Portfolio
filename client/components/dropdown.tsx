@@ -10,12 +10,13 @@ export default function Dropdown(props: any) {
     return (
         <div className={styles.container}>
             <div className={styles.mainTab} onClick={() => { setActive(!active) }}>
-                {selected}
+                <p>{selected}</p>
                 <img className={(active === false) ? "" : styles.hide} src={"../assets/chevron-right.svg"} />
                 <img className={(active === false) ? styles.hide : "" } src={"../assets/chevron-down.svg"} />
             </div>
 
-            <div className={(active === true) ? styles.showDropdown : styles.hideDropdown}>
+            <div  className={ `${styles.dropdownContainer} ${(active === true) ? styles.showDropdown : styles.hideDropdown }` } >
+               
 
                 {props.links.map((data: any) => {
                     return (

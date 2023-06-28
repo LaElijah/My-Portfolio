@@ -14,16 +14,17 @@ export default function FeaturedCard() {
             <div className={styles.cardWrapper}> {/* Project Card Wrapper */}
 
                 <div className={styles.cardLeft} > {/* Left Side */}
-                    {/* <image></image> */}
+                    <div className={styles.imageFrame}>
+                        <img src="../assets/blank.png" />
+                    </div>
                     
                         <div className={styles.featuredCard} >
                             <h2>Project Title</h2>
-                            <h4>Project Description</h4>
-                            <div className={styles.buttonGroup}>
+                            <h4>Lorem ipsum dolor sit amet consectetur. A nibh ullamcorper bibendum sed volutpat. Varius amet id in justo massa et mauris non faucibus. Continum al </h4>
+                            <div className={styles.buttonWrapper}>
                                 <button>Live demo</button>
                                 <button>Source code</button>
                             </div>
-                            {/* Full Width in figma   */}
                         </div>
                     
                 </div>
@@ -35,7 +36,7 @@ export default function FeaturedCard() {
                 <h3>Techology Used</h3>
                 <div className={styles.techList}>
 
-                    {List.map((data: any) => { return <Technology key={data.key} props={data}  /> })}
+                    {List.map((data: any) => { return <Technology key={data.key} props={...data}  /> })}
 
                 </div>
 

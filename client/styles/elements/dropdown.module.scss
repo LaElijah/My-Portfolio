@@ -15,7 +15,21 @@
     border-radius: 8px;
 }
 
+.mainTab > p, .mainTab > img {
+    padding: 0px 8px;
+}
+
+@media (max-width: 320px) {
+ .mainTab > p {
+    font-size: 12px
+ }
+}
+
 @media (max-width: 768px) {
+    .mainTab > img {
+        padding: 0px 0px;
+    }
+    
     .container {
 
 }
@@ -23,10 +37,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px 16px;
+    
     text-align: center;
-    width: auto;
-    font-size: 23px;
+    
+    font-size: 19px;
 font-family: Roboto;
 
 }
@@ -41,11 +55,14 @@ font-family: Roboto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 144px;
+    align-items: center;
+    width: 116px;
+    gap: 4px;
+    padding: 8px 0px;
     
     text-align: center;
     
-    font-size: 23px;
+    font-size: 19px;
 font-family: Roboto;
 }
 
@@ -75,7 +92,7 @@ cursor: default;
 .showDropdown{
     position: absolute;
     border: 1px solid #000000;
-    border-radius: 4px 4px 8px 8px;
+    border-radius: 0px 0px 8px 8px;
     background-color: white;
     border-top: unset;
     box-shadow: 2px 4px 4px 2px #0000004a;
@@ -83,14 +100,76 @@ cursor: default;
 
 }
 
+.dropdownContainer {
+    position: absolute;
+}
+
 .activeLink, .link{
     border-bottom: 1px solid #000000;
-    min-width: 144px;
+    max-width: 288px;
+    padding: 16px 24px;
+    
 
 }
+
+.activeLink > a > h3, .link > a > h3{
+    margin: 0;
+    
+
+}
+
+
 
 
 .hideDropdown {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
