@@ -1,10 +1,17 @@
-version: "0.1"
 
-services: 
-  web: 
+services:
+  next: 
+    image: node:latest
     build: .
-    ports: 
+    
+    ports:
       - "8080:3000"
-    volumes: 
-      - ./my-portfolio:/app
-    command: npm start
+    volumes:
+      - "./src/:/src"
+      - "/src/node_modules"
+    working_dir: "/src"
+    command: "npm run prodDev"
+    environment:
+      - PORT=3000
+      
+    
