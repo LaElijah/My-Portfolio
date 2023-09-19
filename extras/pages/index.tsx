@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <div className={styles.page}>
       
-        {/* <Hook /> */}
+        <Hook />
         {/* <FeaturedCard /> */}
-        <ProjectList data={List} />
+        {/* <ProjectList data={List} /> */}
         {/* <div><h4>Want to see more? Check out the rest of my projects <span>here.</span></h4></div> */}
         {/* <About /> */}
         {/* <Contact /> */}
