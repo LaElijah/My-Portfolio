@@ -1,0 +1,10 @@
+version: "0.1"
+
+services: 
+  web: 
+    build: .
+    ports: 
+      - "8080:3000"
+    volumes: 
+      - ./my-portfolio:/app
+    command: npm start
