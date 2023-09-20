@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container > img {
+    margin-right: 8px;
+}

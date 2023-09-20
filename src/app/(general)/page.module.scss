@@ -1,0 +1,23 @@
+@use '../styles/variables/variables.scss';
+
+
+
+@mixin PrimaryDisplayH1 { @include variables.PrimaryDisplayH1 }
+
+
+
+.container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp {
+    width: 80%;
+    text-align: center;
+    @include PrimaryDisplayH1;
+
+    
+}

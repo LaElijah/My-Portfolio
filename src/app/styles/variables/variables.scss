@@ -1,0 +1,16 @@
+$PrimaryLightP10: #00a347;
+$PrimaryLightP20: #006A3A;
+$PrimaryLightP60: #00361e;
+
+$GreyLightP10: #0e1712;
+$GreyLightP20: #1c2e27;
+$GreyLightP60: #3b5c53;
+
+$BaseSurfaceS90: #F2F4F3;
+
+
+
+@mixin PrimaryDisplayH1 {
+    font-family: 'Roboto', sans-serif;
+    color: $PrimaryLightP20;
+}
