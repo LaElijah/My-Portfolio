@@ -14,3 +14,9 @@ $BaseSurfaceS90: #F2F4F3;
     font-family: 'Roboto', sans-serif;
     color: $PrimaryLightP20;
 }
+
+@mixin PrimaryHeaderH2 {
+    font-family: 'Roboto', sans-serif;
+    color: $PrimaryLightP20;
+    font-size: 16px;
+}

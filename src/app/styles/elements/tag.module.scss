@@ -1,3 +1,6 @@
+@use '../../styles/variables/variables.scss';
+
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -6,4 +9,9 @@
 
 .container > img {
     margin-right: 8px;
+}
+
+.container h2 {
+    margin: 0;
+    @include variables.PrimaryHeaderH2;
 }

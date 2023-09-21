@@ -1,13 +1,15 @@
-$BaseSurfaceS90: #F2F4F3;
+@use '../../styles/variables/variables.scss';
+
+
+$BaseSurfaceS90: variables.$BaseSurfaceS90;
 
 .container {
     display: flex;
     justify-content: center;
     width: 100%;
-
     background: $BaseSurfaceS90;
-
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.20);
+    padding: 8px 0;
 }
 
 .wrapper {
@@ -17,5 +19,4 @@ $BaseSurfaceS90: #F2F4F3;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }

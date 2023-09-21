@@ -1,5 +1,7 @@
 import styles from "../styles/layout/root.module.scss"
-import { MantineProvider } from "@mantine/core"
+import InConstruction from "../temp/temp";
+import '@mantine/core/styles.css';
+import { MantineProvider, ColorSchemeScript } from "@mantine/core"
 
 
 export const metadata = {
@@ -19,14 +21,33 @@ export default function RootLayout({
     { name: 'Projects', key: 1 },
     { name: 'Contact', key: 2 },
   ]
+
   return (
 
     <html lang="en">
+      <head>
+        <ColorSchemeScript />
+      </head>
 
       <body className={styles.page}>
-       
-          <Navbar links={links} />
-          {children}
+
+        <MantineProvider>
+          {(process.env.BUILD === 'development') && (
+
+            <>
+              <Navbar links={links} />
+              <div className={styles.content}>
+                {children}
+              </div>
+            </>
+
+          )}
+          {(process.env.BUILD !== 'development') && (
+            <InConstruction />
+          )}
+
+        </MantineProvider>
+
       </body>
     </html>
   )
