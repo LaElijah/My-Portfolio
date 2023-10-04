@@ -199,9 +199,9 @@ $ButtonOutline: #FDFDE6;
 
 @mixin defaultButton {
 
-    
+
     display: flex;
-    
+
     padding: 8px 12px;
     justify-content: center;
     align-items: center;
@@ -211,10 +211,16 @@ $ButtonOutline: #FDFDE6;
     background-color: $PrimaryGreen;
     border: none;
 
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+
     & p {
         font-family: 'Space Grotesk', sans-serif;
         margin: 0;
+
     }
+
+
 
     & :hover {
         box-shadow: none;
@@ -226,11 +232,11 @@ $ButtonOutline: #FDFDE6;
     & :active {
         background-color: $ButtonPrimaryActive;
 
-        
+
     }
 
 
-    
+
 }
 
 
@@ -242,7 +248,7 @@ $ButtonOutline: #FDFDE6;
     gap: 8px;
     border-radius: 4px;
     border: 1px solid $ButtonOutline;
-    
+
 
     & :hover {
         box-shadow: none;
@@ -278,7 +284,7 @@ $ButtonOutline: #FDFDE6;
 
     &:hover {
         transition: cubic-bezier(1, 0, 0, 1) 0.4s;
-        color: $GreyLightP60; 
+        color: $GreyLightP60;
     }
 
     &:active {
@@ -298,7 +304,7 @@ $ButtonOutline: #FDFDE6;
 
     &:hover {
         transition: cubic-bezier(1, 0, 0, 1) 0.4s;
-        color: $PrimaryLightP60; 
+        color: $PrimaryLightP60;
     }
 
     &:active {
@@ -370,7 +376,7 @@ $ButtonOutline: #FDFDE6;
 
         @media (max-width: 816px) {
             padding: 0px 16px;
-            
+
         }
     }
 
