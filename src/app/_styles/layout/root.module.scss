@@ -1,0 +1,10 @@
+@use '@/variables';
+
+@mixin DefaultContent { @include variables.DefaultContent; }
+
+
+
+.content {
+    @include DefaultContent;
+
+}

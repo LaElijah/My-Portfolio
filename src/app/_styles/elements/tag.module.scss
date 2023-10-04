@@ -1,9 +1,8 @@
-@use '../../styles/variables/variables.scss';
+@use '@/variables';
 
 
 .container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -11,7 +10,8 @@
     margin-right: 8px;
 }
 
-.container h2 {
+.container h3 {
     margin: 0;
-    @include variables.PrimaryHeaderH2;
+    @include variables.H3SemiBold;
+    // TODO: Add a unique color for name tag 
 }

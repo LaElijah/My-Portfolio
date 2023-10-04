@@ -1,8 +1,8 @@
-@use '../styles/variables/variables.scss';
+@use '@/variables';
 
 
 
-@mixin PrimaryDisplayH1 { @include variables.PrimaryDisplayH1 }
+@mixin PrimaryDisplayH1 { @include variables.H2SemiBold }
 
 
 

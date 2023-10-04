@@ -1,0 +1,39 @@
+@use '@/variables';
+
+
+
+$PrimaryLightP10: variables.$PrimaryLightP10;
+$PrimaryLightP20: variables.$PrimaryLightP20;
+$PrimaryLightP60: variables.$PrimaryLightP60;
+
+$GreyLightP10: variables.$GreyLightP10;
+$GreyLightP20: variables.$GreyLightP20;
+$GreyLightP60: variables.$GreyLightP60;
+
+@mixin Link { @include variables.Link }
+@mixin ActiveLink { @include variables.ActiveLink}
+
+
+
+.activeLink {
+    @include ActiveLink;
+}
+
+.link {
+    @include Link;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
+
+

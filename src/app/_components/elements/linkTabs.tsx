@@ -1,6 +1,6 @@
 "use client"
 import { useMediaQuery } from "@mantine/hooks"
-import styles from "../../styles/elements/tabs.module.scss"
+import styles from "@/app/_styles/elements/tabs.module.scss"
 import { useState } from "react"
 import Link from "next/link"
 

@@ -1,4 +1,4 @@
-import styles from "../styles/layout/navbar.module.scss"
+import styles from "@/app/_styles/layout/navbar.module.scss"
 import LinkSection from "./elements/linkSection"
 import Link from "next/link"
 import Tag from "./elements/tag"

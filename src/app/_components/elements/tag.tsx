@@ -1,4 +1,4 @@
-import styles from "../../styles/elements/tag.module.scss"
+import styles from "@/app/_styles/elements/tag.module.scss"
 import Image from 'next/image'
 
 export default function Tag(): JSX.Element {
@@ -11,7 +11,7 @@ export default function Tag(): JSX.Element {
                 className={styles.image}
                 src="/assets/avatar.png"
             />
-            <h2>Elijah Allotey</h2>
+            <h3>Elijah Allotey</h3>
         </div>
     )
 }

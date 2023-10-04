@@ -1,0 +1,35 @@
+@use "@/variables";
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.details {
+
+    & h1 {
+        @include variables.D1SemiBold;
+        color: variables.$PrimaryGreen
+    }
+
+    & h2 {
+        @include variables.H2SemiBold; 
+    }
+   
+    & h3 {
+        @include variables.H3SemiBold;
+    }
+}
+
+.image img {
+    width: 100%
+}
+
+.button {
+    @include variables.defaultButton;
+    // TODO: Add border color, backgorund color 
+    // and optional shadow
+}

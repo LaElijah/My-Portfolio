@@ -1,0 +1,352 @@
+/******************************************/
+/**Includes**/
+
+/******************************************/
+/*Text Colors*/
+
+$PrimaryGreen: #38982F;
+
+
+$PrimaryYellow: #38982F;
+
+
+$PrimaryRed: #FF4E50;
+
+
+$PrimaryBody: #7A7979;
+
+
+$SecondaryBody: #525252;
+
+$PrimaryLightP10: #00a347;
+$PrimaryLightP20: #006A3A;
+$PrimaryLightP60: #00361e;
+
+$GreyLightP10: #0e1712;
+$GreyLightP20: #1c2e27;
+$GreyLightP60: #3b5c53;
+
+
+
+
+
+/******************************************/
+/*Background Colors*/
+
+$PrimaryBackground: #F6E6FD;
+
+
+$SecondaryBackground: #EDEDED;
+
+$BaseSurfaceS90: #F2F4F3;
+
+
+
+/******************************************/
+/*Button Colors*/
+
+$ButtonPrimary: #00b664;
+
+$ButtonPrimaryHover: #03d677;
+$ButtonPrimaryActive: #009451;
+
+
+
+$ButtonOutline: #FDFDE6;
+
+
+
+
+
+/******************************************/
+/******************************************/
+/**Mixins**/
+
+
+/*Typography*/
+
+
+@mixin H4Regular {
+    /* Heading/H4/Regular */
+    font-family: Roboto, sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+}
+
+@mixin H2SemiBold {
+    /* Heading/H2/Semi Bold */
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+}
+
+@mixin H4Light {
+    /* Heading/H4/Light */
+    font-family: Roboto, sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+}
+
+@mixin H3SemiBold {
+    /* Heading/H3/Semi Bold */
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+}
+
+@mixin H4ExtraBold {
+    /* Heading/H4/Extra Bold */
+    font-family: Roboto, sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+}
+
+@mixin H4SemiBold {
+    /* Heading/H4/Extra Bold */
+    font-family: Roboto, sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+}
+
+@mixin S1Light {
+    /* Subheading/S1/Light */
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+}
+
+@mixin H1SemiBold {
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+
+}
+
+@mixin H1Light {
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+
+}
+
+@mixin D1SemiBold {
+    font-family: Roboto, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    max-width: 800px;
+
+}
+
+
+
+
+/******************************************/
+/*Buttons*/
+
+@mixin defaultButton {
+    display: flex;
+    
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+
+    & :hover {
+        box-shadow: none;
+        background-color: $ButtonPrimaryHover;
+
+
+    }
+
+    & :active {
+        background-color: $ButtonPrimaryActive;
+
+        
+    }
+
+
+    
+}
+
+
+@mixin outlineButton {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid $ButtonOutline;
+    
+
+    & :hover {
+        box-shadow: none;
+        border: 1px solid $ButtonPrimaryHover;
+
+    }
+
+    & :active {
+        border: 1px solid $ButtonPrimaryActive;
+
+    }
+}
+
+
+
+
+
+/******************************************/
+
+
+
+
+
+
+@mixin Link {
+
+    color: $GreyLightP20;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        transition: cubic-bezier(1, 0, 0, 1) 0.4s;
+        color: $GreyLightP60; 
+    }
+
+    &:active {
+        color: $GreyLightP10;
+    }
+}
+
+
+@mixin ActiveLink {
+
+    color: $PrimaryLightP20;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        transition: cubic-bezier(1, 0, 0, 1) 0.4s;
+        color: $PrimaryLightP60; 
+    }
+
+    &:active {
+        color: $PrimaryLightP10;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/******************************************/
+
+
+
+@mixin flexSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 64px;
+    margin: 32px;
+}
+
+
+@mixin mobileSection {
+    flex-direction: column;
+    padding: 32px;
+    margin: 16px;
+}
+
+@mixin textArea {
+    border: 2px #41cf7744 solid;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #41cf770e;
+    max-height: 100%;
+    height: 256px;
+    overflow-y: scroll;
+}
+
+
+
+@mixin disabledButton {
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    color: black;
+    box-shadow: unset;
+    cursor: not-allowed;
+}
+
+
+@mixin DefaultContent {
+    margin: 32px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &> :first-child {
+        width: 100%;
+        max-width: 800px;
+
+        @media (max-width: 816px) {
+            padding: 0px 16px;
+            
+        }
+    }
+
+}
