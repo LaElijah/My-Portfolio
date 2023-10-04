@@ -1,35 +1,94 @@
 @use "@/variables";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 
 
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+
+.hook {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-.details {
 
-    & h1 {
-        @include variables.D1SemiBold;
-        color: variables.$PrimaryGreen
-    }
 
-    & h2 {
-        @include variables.H2SemiBold; 
-    }
-   
-    & h3 {
-        @include variables.H3SemiBold;
-    }
-}
-
-.image img {
-    width: 100%
+.media {
+    display: flex;
+    justify-content: center;
 }
 
 .button {
-    @include variables.defaultButton;
-    // TODO: Add border color, backgorund color 
-    // and optional shadow
+        @include variables.defaultButton;
+}
+.details {
+
+  
+
+   
+
+
+    & h1 {
+        @include variables.D1SemiBold;
+        color: variables.$PrimaryGreen;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    & h2 {
+        @include variables.H2SemiBold;
+        font-weight: 400;
+    }
+
+    & h3 {
+        @include variables.H3SemiBold;
+        font-weight: 400;
+        margin-bottom: 8px; 
+    }
+}
+
+.image {
+
+    background-color: rgb(41, 48, 33);
+    padding-left: 16px;
+    border-radius: 192px 192px 192px 192px;
+
+    width: 64%;
+    max-width: 800px;
+
+    & img {
+        width: 100%
+    }
+}
+
+
+
+
+@media (max-width: 599px) {
+    .hook {
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .hook {
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .image {
+        width: 72%;
+    }
+
 }
