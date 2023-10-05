@@ -42,12 +42,8 @@ export default function Skills(): JSX.Element {
     return (
         <section className={styles.container}>
 
-            <SegmentedButton tabs={tabsTabel}/>
-               
-
-
-
-
+            <SegmentedButton tabs={tabs}/>
+          
 
         </section>
     )
