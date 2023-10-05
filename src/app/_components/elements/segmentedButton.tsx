@@ -1,24 +1,47 @@
-
+"use client"
 
 import styles from "@/app/_styles/elements/segmentedButton.module.scss"
+import { useState } from "react"
+
+export default function SegmentedButton(props: {
+    tabs: any,
+
+}): JSX.Element {
+    const { tabs } = props
+
+    const labels = Object.keys(tabs)
+    const [label, setLabel] = useState(labels[0])
 
 
-export default function SegmentedButton(props: { selections: string[] }): JSX.Element {
-    const { selections } = props
 
     return (
-        <div className={styles.container}>
-            {
-                selections.map(selection => {
-                    return (
-                        <div>
-                            {selection}
-                        </div>
-                    )
-                })
-            }
+
+        <>
+            <>
+                <div className={styles.container}>
+                    {
+                        labels.map(label => {
+                            return (
+                                <div 
+                                onClick={() => setLabel(label)}
+                                key={label}
+                                >
+                                    {label}
+                                </div>
+                            )
+                        })
+                    }
 
 
-        </div>
+                </div>
+            </>
+
+            <>
+            {tabs[label]}
+            </>
+
+
+
+        </>
     )
 }
