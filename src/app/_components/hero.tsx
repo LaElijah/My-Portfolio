@@ -1,6 +1,5 @@
 import styles from '@/app/_styles/components/hero.module.scss';
 import Link from "next/link";
-import Image from "next/image";
 import { Tooltip } from '@mantine/core';
 import {
     IconBrandGithub,
@@ -84,7 +83,7 @@ export default function Hero(): JSX.Element {
 
                 <div className={styles.image}>
 
-                    <Image
+                    <img
                         src={"/assets/bust.svg"}
                         alt="Stylized self portrait"
                     />

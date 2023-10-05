@@ -21,6 +21,10 @@ export default function Skills(): JSX.Element {
         {
             label: "Soft Skills",
             page: <SoftSkills />
+        },
+        {
+            label: "Big Skills",
+            page: <SoftSkills />
         }
     ]
 

@@ -6,8 +6,8 @@ export default function SoftSkills() {
 
     
     return (
-        <div className={styles.container} >
+        <section className={styles.container} >
             How about soft skills though?
-        </div>
+        </section>
     )
 }

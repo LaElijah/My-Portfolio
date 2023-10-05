@@ -14,17 +14,11 @@ export default function SegmentedButton(props: {
 
 }): JSX.Element {
     const { tabs: tabsArray } = props
-    console.log(tabsArray)
-
     const convertTabs = (tabs: Tab[], tabsTable: any = {}) => {
-        
-
         tabs.map(({label, page}: Tab) => {
             tabsTable[label] = page
         })
-
         return tabsTable
-
     }
 
     const tabs = convertTabs(tabsArray)
@@ -40,13 +34,16 @@ export default function SegmentedButton(props: {
             <>
                 <div className={styles.container}>
                     {
-                        labels.map(label => {
+                        labels.map((name: string) => {
                             return (
                                 <div 
-                                onClick={() => setLabel(label)}
-                                key={label}
+                                onClick={() => setLabel(name)}
+                                key={name}
+                                className={(name === label) 
+                                    ? styles.activeTab : styles.tab
+                                }
                                 >
-                                    {label}
+                                    {name}
                                 </div>
                             )
                         })
