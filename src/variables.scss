@@ -7,7 +7,7 @@
 /******************************************/
 /*Text Colors*/
 
-$PrimaryGreen: #38982F;
+$PrimaryGreen: #367d27;
 
 
 $PrimaryYellow: #38982F;
@@ -214,6 +214,7 @@ $ButtonOutline: #FDFDE6;
     font-family: 'Space Grotesk', sans-serif;
     text-decoration: none;
 
+  
     & p {
         font-family: 'Space Grotesk', sans-serif;
         margin: 0;
@@ -222,22 +223,9 @@ $ButtonOutline: #FDFDE6;
 
 
 
-    & :hover {
-        box-shadow: none;
-        background-color: $ButtonPrimaryHover;
-
-
-    }
-
-    & :active {
-        background-color: $ButtonPrimaryActive;
-
-
-    }
-
-
-
 }
+
+
 
 
 @mixin outlineButton {
@@ -280,7 +268,7 @@ $ButtonOutline: #FDFDE6;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
     text-decoration: none;
-    cursor: po'Space Grotesk';
+    cursor: pointer;
 
     &:hover {
         transition: cubic-bezier(1, 0, 0, 1) 0.4s;

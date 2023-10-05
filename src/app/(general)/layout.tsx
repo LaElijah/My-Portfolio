@@ -10,7 +10,7 @@ export const metadata = {
   
 }
 
-import Navbar from "../_components/navbar"
+import Navbar from "../_components/layout/navbar"
 
 export default function RootLayout({
   children,
