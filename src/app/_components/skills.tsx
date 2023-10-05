@@ -1,8 +1,8 @@
 
-
+"use client"
 
 import styles from "@/app/_styles/components/skills.module.scss"
-import SegmentedButton from "./elements/segmentedButton"
+import TabGroup from "./elements/TabGroup"
 import TechSkills from "./elements/techSkills"
 import SoftSkills from "./elements/softSkills"
 
@@ -22,21 +22,17 @@ export default function Skills(): JSX.Element {
             label: "Soft Skills",
             page: <SoftSkills />
         },
-        {
-            label: "Big Skills",
-            page: <SoftSkills />
-        }
     ]
 
 
     return (
         <section className={styles.container}>
 
-            <SegmentedButton 
-            unstyledTabArea
-            tabs={tabs}
+            <TabGroup
+                unstyledTabArea
+                tabs={tabs}
             />
-          
+
 
         </section>
     )
