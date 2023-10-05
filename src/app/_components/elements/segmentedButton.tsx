@@ -10,16 +10,20 @@ type Tab = {
 
 
 export default function SegmentedButton(props: {
-    tabs: any,
-
+    tabs: Tab[],
+    unstyledTabArea?: boolean
 }): JSX.Element {
+    
+    const unstyledTabArea = props?.unstyledTabArea || false
     const { tabs: tabsArray } = props
+
     const convertTabs = (tabs: Tab[], tabsTable: any = {}) => {
-        tabs.map(({label, page}: Tab) => {
+        tabs.map(({ label, page }: Tab) => {
             tabsTable[label] = page
         })
         return tabsTable
     }
+
 
     const tabs = convertTabs(tabsArray)
 
@@ -31,17 +35,20 @@ export default function SegmentedButton(props: {
     return (
 
         <>
+
+
+
             <>
                 <div className={styles.container}>
                     {
                         labels.map((name: string) => {
                             return (
-                                <div 
-                                onClick={() => setLabel(name)}
-                                key={name}
-                                className={(name === label) 
-                                    ? styles.activeTab : styles.tab
-                                }
+                                <div
+                                    onClick={() => setLabel(name)}
+                                    key={name}
+                                    className={(name === label)
+                                        ? styles.activeTab : styles.tab
+                                    }
                                 >
                                     {name}
                                 </div>
@@ -53,9 +60,10 @@ export default function SegmentedButton(props: {
                 </div>
             </>
 
-            <>
-            {tabs[label]}
-            </>
+            <section
+                className={unstyledTabArea ? "" : styles.tabArea}>
+                {tabs[label]}
+            </section>
 
 
 

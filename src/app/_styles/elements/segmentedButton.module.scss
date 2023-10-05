@@ -45,3 +45,13 @@
 
 }
 
+.tabArea {
+    // TODO: Update styled text-area
+    border: 2px solid variables.$PrimaryGreen; 
+    padding: 16px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 32px;
+}
+

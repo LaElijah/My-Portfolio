@@ -28,25 +28,14 @@ export default function Skills(): JSX.Element {
         }
     ]
 
-    const convertTabs = (tabs: Tab[], tabsTable: any = {}) => {
-        
-
-        tabs.map(({label, page}: Tab) => {
-            tabsTable[label] = page
-        })
-
-        return tabsTable
-
-    }
-
-    const tabsTabel = convertTabs(tabs)
-
-    
 
     return (
         <section className={styles.container}>
 
-            <SegmentedButton tabs={tabs}/>
+            <SegmentedButton 
+            unstyledTabArea
+            tabs={tabs}
+            />
           
 
         </section>
