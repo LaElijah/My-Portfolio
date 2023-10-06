@@ -2,7 +2,7 @@
 "use client"
 
 import styles from "@/app/_styles/components/skills.module.scss"
-import TabGroup from "./elements/TabGroup"
+import TabGroup from "./elements/tabGroup"
 import TechSkills from "./elements/techSkills"
 import SoftSkills from "./elements/softSkills"
 
@@ -29,8 +29,8 @@ export default function Skills(): JSX.Element {
         <section className={styles.container}>
 
             <TabGroup
-                unstyledTabArea
                 tabs={tabs}
+                unstyledTabArea
             />
 
 

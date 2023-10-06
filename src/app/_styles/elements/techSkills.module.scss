@@ -1,0 +1,36 @@
+@use "@/variables.scss";
+
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.card {
+    width: 100%;
+    max-width: 256px;
+    border-radius: 8px;
+    box-shadow:
+        0px 1px 4px rgba(128, 128, 128, 0.5),
+        0px 2px 8px variables.$PrimaryGreen;
+
+}
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+
+        
+    }
+}

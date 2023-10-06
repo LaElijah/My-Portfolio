@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "@/app/_styles/elements/segmentedButton.module.scss"
+import styles from "@/app/_styles/elements/tabGroup.module.scss"
 import { useState } from "react"
 
 type Tab = {
@@ -12,12 +12,13 @@ type Tab = {
 export default function TabGroup(props: {
     tabs: Tab[],
     unstyledTabArea?: boolean
+    element?: boolean;
     onClick?: ((event: string) => void) | ((event: string) => Promise<void>)
 }): JSX.Element {
-    
+
     const unstyledTabArea = props?.unstyledTabArea || false
-    const onClick = props?.onClick || function() {}
-    const { tabs: tabsArray } = props
+    const onClick = props?.onClick || function () { }
+    const { tabs: tabsArray, element } = props
 
     const convertTabs = (tabs: Tab[], tabsTable: any = {}) => {
         tabs.map(({ label, page }: Tab) => {
@@ -25,6 +26,7 @@ export default function TabGroup(props: {
         })
         return tabsTable
     }
+
 
 
     const tabs = convertTabs(tabsArray)
@@ -41,7 +43,7 @@ export default function TabGroup(props: {
 
 
             <>
-                <div className={styles.container}>
+                <div className={`${styles.container} ${(!element && styles.element)}`}>
                     {
                         labels.map((name: string) => {
                             return (
@@ -52,8 +54,10 @@ export default function TabGroup(props: {
                                         onClick(event)
                                     }}
                                     key={name}
-                                    className={(name === label)
-                                        ? styles.activeTab : styles.tab
+                                    className={
+                                        (name === label)
+                                            ? styles.activeTab
+                                            : styles.tab
                                     }
                                 >
                                     {name}
@@ -66,13 +70,15 @@ export default function TabGroup(props: {
                 </div>
             </>
 
-            <section
-                className={unstyledTabArea ? "" : styles.tabArea}>
-                {tabs[label]}
-            </section>
+            {!unstyledTabArea &&
+                <section
+                    className={styles.tabArea}
+                >
+                    {tabs[label]}
+                </section>
+            }
 
-
-
+            {unstyledTabArea && tabs[label]}
         </>
     )
 }
