@@ -5,6 +5,11 @@
 
 
 .content {
-    @include DefaultContent;
+  
+
+    & [id="contained"] {
+        @include DefaultContent;
+       
+    }
 
 }

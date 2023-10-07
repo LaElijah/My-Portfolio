@@ -3,7 +3,15 @@ import styles from "@/app/_styles/elements/techSkills.module.scss"
 import {
     IconBrandReact,
     IconBrandNodejs,
-    IconBrandVscode
+    IconBrandVscode,
+    IconBrandCss3,
+    IconBrandSass,
+    IconBrandJavascript,
+    IconBrandTypescript,
+    IconBrandMongodb,
+    IconBrandDocker,
+    IconBrandNextjs,
+    IconBrandHtml5
 } from "@tabler/icons-react"
 
 
@@ -32,7 +40,19 @@ export default function TechSkills() {
                 {
                     label: "React",
                     icon: <IconBrandReact />
-                }
+                },
+                {
+                    label: "HTML",
+                    icon: <IconBrandHtml5/>
+                },
+                {
+                    label: "CSS",
+                    icon: <IconBrandCss3 />
+                },
+                {
+                    label: "SCSS",
+                    icon: <IconBrandSass />
+                },
             ]
         },
         {
@@ -41,16 +61,39 @@ export default function TechSkills() {
                 {
                     label: "NodeJS",
                     icon: <IconBrandNodejs />
+                },
+                {
+                    label: "Mongo DB",
+                    icon: <IconBrandMongodb />
+                },
+                {
+                    label: "Docker",
+                    icon: <IconBrandDocker />
                 }
             ]
         },
         {
-            group: "Full Stack / Tools",
+            group: "Full Stack Tools / Languages",
             skills: [
+                {
+                    label: "Next JS",
+                    icon: <IconBrandNextjs />
+                },
+
+                {
+                    label: "Typescript",
+                    icon: <IconBrandTypescript />
+                },
+
+                {
+                    label: "Javascript",
+                    icon: <IconBrandJavascript />
+                },
+
                 {
                     label: "VS Code",
                     icon: <IconBrandVscode />
-                }
+                },
             ]
         }
 
@@ -67,11 +110,13 @@ export default function TechSkills() {
                 cardData.map(({ group, skills }: SkillsCard) => {
 
                     return (
+                        <>
+                        <h2>{group}</h2>
                         <div
                             key={group}
                             className={styles.card}
                         >
-                            <h2>{group}</h2>
+                           
                             {
                                 skills.map(({ label, icon }: Skill) => {
 
@@ -90,6 +135,7 @@ export default function TechSkills() {
                             }
 
                         </div>
+                        </>
                     )
                 })
             }

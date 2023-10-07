@@ -21,7 +21,10 @@ export default function Hero(): JSX.Element {
     }
 
     return (
-        <section className={styles.container}>
+        <section 
+        className={styles.container}
+        
+        >
 
 
             <div className={styles.hook}>
