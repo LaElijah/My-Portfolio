@@ -7,11 +7,13 @@
 
 [ ] Index
     - [ ] Hero
-        - [ ] Name
-        - [ ] Title
-        - [ ] Image
+        - [x] Name
+        - [x] Title
+        - [x] Image
         - [ ] Social media
-        - [ ] Contact button
+            - [ ] Link URLs
+            - [x] Link Icons
+        - [x] Contact button
         - [ ] Important skills
 
     - [ ] Who am i
@@ -27,6 +29,7 @@
         - [ ] Other
 
 -------------------------------------
+
 
 [ ] About me
     - [ ] Where im from 

@@ -9,12 +9,12 @@ export default function FeaturedProject() {
 
 
     return (
-        <div className={styles.container} >
-            <section id="contained" >
+        <section className={styles.container} >
+            <div id="contained" >
           
+                Featured Project
 
-          
-            </section>
-        </div>
+            </div>
+        </section>
     )
 }
