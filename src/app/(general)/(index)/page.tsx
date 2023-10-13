@@ -1,6 +1,8 @@
 import Hero from "@/app/_components/hero"
 import Skills from "@/app/_components/skills"
+import Projects from "@/app/_components/projects"
 import styles from '@/app/_styles/pages/index.module.scss'
+
 
 export default async function Index() {
 
@@ -11,6 +13,7 @@ export default async function Index() {
 
             <Hero />
             <Skills />
+            <Projects />
 
 
 
