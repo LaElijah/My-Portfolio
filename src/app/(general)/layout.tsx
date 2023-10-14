@@ -2,7 +2,7 @@ import styles from "@/app/_styles/layout/root.module.scss"
 import InConstruction from "../temp/temp";
 import '@mantine/core/styles.css';
 import { MantineProvider, ColorSchemeScript } from "@mantine/core"
-
+import Footer from "@/app/_components/layout/footer"
 
 export const metadata = {
   title: 'Next.js',
@@ -20,7 +20,7 @@ export default function RootLayout({
   const links = [
     { name: 'About', key: 0 },
     { name: 'Projects', key: 1 },
-    { name: 'Contact', key: 2 },
+    { name: 'Blog', key: 2 },
   ]
 
   return (
@@ -42,6 +42,7 @@ export default function RootLayout({
                 {children}
                 </div>
               </div>
+              <Footer links={links} />
             </>
 
           )}

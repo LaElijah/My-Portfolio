@@ -17,7 +17,7 @@ export default function Navbar(props: Props): JSX.Element {
     const { links } = props
 
     return (
-        <section className={styles.container} >
+        <nav className={styles.container} >
 
             <div className={styles.wrapper}>
 
@@ -28,6 +28,6 @@ export default function Navbar(props: Props): JSX.Element {
             </div>
 
 
-        </section>
+        </nav>
     )
 }

@@ -1,14 +1,13 @@
 @use '@/variables';
 
 
-$BaseSurfaceS90: variables.$BaseSurfaceS90;
 
 .container {
     display: flex;
     justify-content: center;
     width: 100%;
-    background: $BaseSurfaceS90;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.20);
+    background: variables.$BaseSurfaceS90;;
+    box-shadow: variables.$DefaultBoxShadow;
     padding: 8px 0;
 }
 

@@ -29,7 +29,7 @@ $GreyLightP10: #0e1712;
 $GreyLightP20: #1c2e27;
 $GreyLightP60: #3b5c53;
 
-
+$ActiveButton: #61e746;
 
 
 
@@ -38,8 +38,11 @@ $GreyLightP60: #3b5c53;
 
 $PrimaryBackground: #F6E6FD;
 
+$SecondaryBackground: #293021;
 
-$SecondaryBackground: #EDEDED;
+$DefaultBoxShadow: 0px 4px 8px 0px #00000040;
+
+$AltBackground: #EDEDED;
 
 $BaseSurfaceS90: #F2F4F3;
 
@@ -355,8 +358,8 @@ $ButtonOutline: #FDFDE6;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    min-height: 100vh;
 
     &> :first-child {
         width: 100%;

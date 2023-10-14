@@ -1,4 +1,5 @@
 import Project from "./elements/project";
+import styles from "@/app/_styles/components/projects.module.scss"
 
 type Tool = {
     label: string;
@@ -29,11 +30,35 @@ export default function ProjectGrid() {
                     icon: <>d</>
                 }
             ]
+        },
+        {
+            title: "Kens Driving",
+            image: "/assets/avatar.png",
+            details: "Here are some details about kens driving",
+            alt: "Kens driving cover image",
+            tools: [
+                {
+                    label: "react",
+                    icon: <>react</>
+                }
+            ]
+        },
+        {
+            title: "Is It Really Warmer This Winter? (IIRWTW)",
+            image: "/assets/avatar.png",
+            details: "Here are some details about kens driving",
+            alt: "IIRWTW cover image",
+            tools: [
+                {
+                    label: "react",
+                    icon: <>react library</>
+                }
+            ]
         }
     ]
     return (
-        <section>
-            {projects.map(project => <Project {...project} />) }
+        <section className={styles.container}>
+            {projects.map(project => <Project  {...project} key={project.title} />) }
         </section>
     )
 }
