@@ -10,5 +10,31 @@
 
   & > :last-child {
     width: 60%;
+
+    & > :first-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    & > :first-child {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    & > :last-child {
+      width: 100%;
+      max-width: 400px;
+
+      & > :first-child {
+        margin-bottom: 16px;
+      }
+    }
   }
 }

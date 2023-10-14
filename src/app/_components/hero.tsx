@@ -130,10 +130,12 @@ export default function Hero(): JSX.Element {
       <footer className={styles.footer}>
         <h2>My favorite tech_</h2>
 
-        <div className={styles.primarySkillsGroup}>
-          {primarySkills.map((skill: PrimarySkill) => {
-            return <PrimarySkill {...skill} key={skill.label} />;
-          })}
+        <div className={styles.primarySkillsWrapper}>
+          <div className={styles.primarySkillsGroup}>
+            {primarySkills.map((skill: PrimarySkill) => {
+              return <PrimarySkill {...skill} key={skill.label} />;
+            })}
+          </div>
         </div>
       </footer>
     </>
