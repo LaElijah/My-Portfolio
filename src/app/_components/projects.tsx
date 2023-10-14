@@ -1,5 +1,9 @@
 import Project from "./elements/project";
 import styles from "@/app/_styles/components/projects.module.scss"
+import {
+    IconBrandReact
+} from "@tabler/icons-react"
+
 
 type Tool = {
     label: string;
@@ -27,7 +31,7 @@ export default function ProjectGrid() {
             tools: [
                 {
                     label: "react",
-                    icon: <>d</>
+                    icon: <IconBrandReact />
                 }
             ]
         },
@@ -39,7 +43,7 @@ export default function ProjectGrid() {
             tools: [
                 {
                     label: "react",
-                    icon: <>react</>
+                    icon: <IconBrandReact />
                 }
             ]
         },
@@ -51,7 +55,7 @@ export default function ProjectGrid() {
             tools: [
                 {
                     label: "react",
-                    icon: <>react library</>
+                    icon: <IconBrandReact />
                 }
             ]
         }

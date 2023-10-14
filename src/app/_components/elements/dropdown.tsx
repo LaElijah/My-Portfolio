@@ -1,23 +1,12 @@
 "use client"
 import { useMediaQuery } from "@mantine/hooks"
 import { Burger, Menu } from "@mantine/core"
-import Link from "next/link"
-import styles from "../../styles/elements/dropdown.module.scss"
 import { useRouter } from "next/navigation"
 
 
-type Link = {
-    name: string,
-    key: number
-}
 
-interface Props {
-    links: Link[]
-}
-
-export default function Dropdown(props: Props): JSX.Element | undefined {
+export default function Dropdown({links}: {links: Link[]}): JSX.Element | undefined {
     const router = useRouter()
-    const { links } = props
 
     if (useMediaQuery('(max-width: 768px)')) {
         return (
@@ -31,12 +20,12 @@ export default function Dropdown(props: Props): JSX.Element | undefined {
                     >
                         Home
                     </Menu.Item>
-                    {links.map((link) => (
+                    {links.map(({label, key, link}: Link): JSX.Element => (
                         <Menu.Item
-                            key={link.key}
-                            onClick={() => router.push(`/${link.name.toLowerCase()}`)}
+                            key={key}
+                            onClick={() => router.push(link)}
                         >
-                            {link.name}
+                            {label}
                         </Menu.Item>
                     ))}
                 </Menu.Dropdown>

@@ -4,21 +4,13 @@ import styles from "@/app/_styles/elements/tabs.module.scss"
 import { useState } from "react"
 import Link from "next/link"
 
-type Link = {
-    name: string,
-    key: number
-}
-
-interface Props {
-    links: Link[]
-}
 
 
-export default function LinkTabs(props: Props): JSX.Element | undefined {
+export default function LinkTabs({links}: { links: Link[]}): JSX.Element | undefined {
 
 
     const [selected, setSelected] = useState("Home")
-    const { links } = props
+
 
 
     if (useMediaQuery('(min-width: 769px)')) {
@@ -34,15 +26,15 @@ export default function LinkTabs(props: Props): JSX.Element | undefined {
                     >
                         Home
                     </Link>
-                    {links.map(({ name, key }: Link) => {
+                    {links.map(({ label, link, key }: Link): JSX.Element => {
                         return (
                             <Link
-                                href={`/${name.toLowerCase()}`}
-                                className={(name === selected) ? styles.activeLink : styles.link}
+                                href={link}
+                                className={(label === selected) ? styles.activeLink : styles.link}
                                 key={key}
-                                onClick={() => setSelected(name)}
+                                onClick={() => setSelected(label)}
                             >
-                                {name}
+                                {label}
                             </Link>
                         )
                     }

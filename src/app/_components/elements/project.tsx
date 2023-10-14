@@ -2,20 +2,6 @@ import Image from "next/image"
 import styles from "@/app/_styles/elements/project.module.scss"
 
 
-type Tool = {
-    label: string;
-    icon: JSX.Element;
-}
-
-interface ProjectItem {
-    title: string;
-    image: string;
-    details: string;
-    alt: string;
-    tools: Tool[];
-
-}
-
 
 export default function Project({
     title,
@@ -23,29 +9,31 @@ export default function Project({
     details,
     tools,
     alt
-}: ProjectItem) {
+}: ProjectItem): JSX.Element {
 
 
     return (
         <div className={styles.container}>
-            <h2>{title}</h2>
 
             <Image
                 alt={alt}
-                width={64}
-                height={64}
+                width={320}
+                height={200}
                 src={image}
             />
 
+            <h2>{title}</h2>
+
             <h3>{details}</h3>
 
-            {tools.map(({ label, icon }): any => {
+            {tools.map(({ label, icon }: Tool): JSX.Element => {
                 return (
                     <div
+                        className={styles.tool}
                         key={label}
                     >
-                        {label}
                         {icon}
+                        <h3>{label}</h3>
                     </div>
                 )
             })}

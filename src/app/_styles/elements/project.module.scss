@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    max-width: 320px;
+    border: 2px solid blue;
+    margin-bottom: 32px;
+
+    & img {
+        width: 100%;
+    }
+
+
+    & h2 {
+        color: red;
+    }
+
+    & h3 {
+        color: green;
+    }
+
+    
+}
+
+.tool {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & > :first-child {
+        margin-left: 8px;
+    }
+    & h3 {
+        color: blue;
+    }
+}

@@ -10,58 +10,73 @@ import {
 } from "@tabler/icons-react"
 
 
-type PrimarySkill = {
-    logo: JSX.Element;
-    label: string;
-}
+
 export function PrimarySkill({ logo, label }: PrimarySkill) {
 
     return (
         <div
             key={label}
-            className={styles.primarySkills}
+            className={styles.primarySkill}
         >
             {logo}
-            {label}
+            <h3>{label}</h3>
         </div>
     )
 }
 export default function Skills(): JSX.Element {
 
+    // const iconFormat = ( isMobile 
+    //     ? {
+    //     width: 64,
+    //     height: 64
+    // }
+    // : {
+    //     width: 128,
+    //     height: 128
+
+    // })
+
+    const logoFormat = {
+        width: 64,
+        height: 64
+    }
+
 
     const primarySkills: PrimarySkill[] = [
 
         {
-            logo: <IconBrandReact />,
+            logo: <IconBrandReact {...logoFormat} />,
             label: "React"
         },
 
         {
-            logo: <IconBrandSass />,
+            logo: <IconBrandSass {...logoFormat} />,
             label: "SCSS"
         },
 
         {
-            logo: <IconBrandNextjs />,
+            logo: <IconBrandNextjs {...logoFormat}/>,
             label: "NextJS"
         },
 
         {
-            logo: <IconBrandNodejs />,
+            logo: <IconBrandNodejs {...logoFormat}/>,
             label: "NodeJS / ExpressJS"
         },
 
 
         {
-            logo: <IconBrandMongodb />,
+            logo: <IconBrandMongodb {...logoFormat}/>,
             label: "MongoDB"
         },
     ]
 
+    
+
     return (
         <section className={styles.container}>
 
-            <header className={styles.primarySkills} >
+            <header className={styles.primarySkillsGroup} >
                 {primarySkills.map((skill: PrimarySkill) => {
                     return <PrimarySkill {...skill} key={skill.label} />
                 })}

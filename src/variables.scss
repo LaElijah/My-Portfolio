@@ -374,11 +374,13 @@ $ButtonOutline: #FDFDE6;
 }
 
 @mixin CardGrid {
+    width: 100%;
     display: grid;
-    grid-template-columns:repeat(auto-fill, 256px);
+    grid-template-columns:repeat(auto-fill, 320px);
     grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
 
-    @media (max-width: 768px) {
+    @media (max-width: 672px) {
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -3,6 +3,8 @@ import InConstruction from "../temp/temp";
 import '@mantine/core/styles.css';
 import { MantineProvider, ColorSchemeScript } from "@mantine/core"
 import Footer from "@/app/_components/layout/footer"
+import Navbar from "../_components/layout/navbar"
+
 
 export const metadata = {
   title: 'Next.js',
@@ -10,17 +12,18 @@ export const metadata = {
   
 }
 
-import Navbar from "../_components/layout/navbar"
+
+
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const links = [
-    { name: 'About', key: 0 },
-    { name: 'Projects', key: 1 },
-    { name: 'Blog', key: 2 },
+  const links: Link[] = [
+    { label: 'About', link: '/about', key: 0 },
+    { label: 'Projects', link: '/projects', key: 1 },
+    { label: 'Blog', link: '/blog', key: 2 },
   ]
 
   return (

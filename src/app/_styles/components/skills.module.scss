@@ -6,3 +6,19 @@
     align-items: center;
 }
 
+.primarySkill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    & > h3 {
+        color: blue;
+    }
+}
+
+.primarySkillsGroup {
+    display: flex;
+
+}
+
