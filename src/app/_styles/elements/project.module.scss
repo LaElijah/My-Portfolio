@@ -13,18 +13,24 @@
   }
 
   & h2 {
-    @include variables.H2SemiBold;
+    @include variables.H3SemiBold;
+    margin-bottom: 4px;
+    color: variables.$PrimaryGreen;
   }
 
-  & h3 {
+  & > h3 {
     @include variables.H3SemiBold;
+    font-weight: 400;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid black;
   }
 }
 
 .tool {
   @include variables.DefaultPill;
 
-  background-color: blue;
+  background-color: variables.$PrimaryGreen;
   color: white;
 
   & h3 {

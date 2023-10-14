@@ -106,7 +106,7 @@ export default function Hero(): JSX.Element {
               problems.
             </h3>
 
-            <Link href="/contact" className={styles.button}>
+            <Link href="#contact" className={styles.button}>
               <p>Contact me</p>
             </Link>
 
@@ -128,7 +128,7 @@ export default function Hero(): JSX.Element {
       </section>
 
       <footer className={styles.footer}>
-        <h2>My favorite tech</h2>
+        <h2>My favorite tech_</h2>
 
         <div className={styles.primarySkillsGroup}>
           {primarySkills.map((skill: PrimarySkill) => {

@@ -57,7 +57,7 @@ $ButtonOutline: #fdfde6;
 
 @mixin H4Regular {
   /* Heading/H4/Regular */
-  font-family: "Space Grotesk", sans-serif;
+
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -68,7 +68,7 @@ $ButtonOutline: #fdfde6;
 
 @mixin H2SemiBold {
   /* Heading/H2/Semi Bold */
-  font-family: "Space Grotesk", sans-serif;
+
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -79,7 +79,7 @@ $ButtonOutline: #fdfde6;
 
 @mixin H4Light {
   /* Heading/H4/Light */
-  font-family: "Space Grotesk", sans-serif;
+
   font-size: 23px;
   font-style: normal;
   font-weight: 300;
@@ -90,7 +90,7 @@ $ButtonOutline: #fdfde6;
 
 @mixin H3SemiBold {
   /* Heading/H3/Semi Bold */
-  font-family: "Space Grotesk", sans-serif;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -101,7 +101,7 @@ $ButtonOutline: #fdfde6;
 
 @mixin H4ExtraBold {
   /* Heading/H4/Extra Bold */
-  font-family: "Space Grotesk", sans-serif;
+
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -112,7 +112,7 @@ $ButtonOutline: #fdfde6;
 
 @mixin H4SemiBold {
   /* Heading/H4/Extra Bold */
-  font-family: "Space Grotesk", sans-serif;
+
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -123,7 +123,7 @@ $ButtonOutline: #fdfde6;
 
 @mixin S1Light {
   /* Subheading/S1/Light */
-  font-family: "Space Grotesk", sans-serif;
+
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
@@ -133,7 +133,6 @@ $ButtonOutline: #fdfde6;
 }
 
 @mixin H1SemiBold {
-  font-family: "Space Grotesk", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -143,7 +142,6 @@ $ButtonOutline: #fdfde6;
 }
 
 @mixin H1Light {
-  font-family: "Space Grotesk", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -153,7 +151,6 @@ $ButtonOutline: #fdfde6;
 }
 
 @mixin D1SemiBold {
-  font-family: "Space Grotesk", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -163,7 +160,6 @@ $ButtonOutline: #fdfde6;
 }
 
 @mixin D1Bold {
-  font-family: "Space Grotesk", sans-serif;
   font-size: 48px;
   font-style: normal;
   line-height: normal;
@@ -187,11 +183,9 @@ $ButtonOutline: #fdfde6;
   background-color: $PrimaryGreen;
   border: none;
 
-  font-family: "Space Grotesk", sans-serif;
   text-decoration: none;
 
   & p {
-    font-family: "Space Grotesk", sans-serif;
     margin: 0;
   }
 }
@@ -220,7 +214,7 @@ $ButtonOutline: #fdfde6;
 @mixin Link {
   color: $GreyLightP20;
   font-size: 16px;
-  font-family: "Space Grotesk", sans-serif;
+
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -238,7 +232,7 @@ $ButtonOutline: #fdfde6;
 @mixin ActiveLink {
   color: $PrimaryLightP20;
   font-size: 16px;
-  font-family: "Space Grotesk", sans-serif;
+
   font-weight: 500;
   text-decoration: none;
   cursor: po "Space Grotesk";

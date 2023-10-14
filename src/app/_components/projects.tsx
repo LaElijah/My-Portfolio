@@ -55,10 +55,13 @@ export default function ProjectGrid() {
     },
   ];
   return (
-    <section className={styles.container}>
-      {projects.map((project) => (
-        <Project {...project} key={project.title} />
-      ))}
-    </section>
+    <>
+      <h2 className="label">My projects_</h2>
+      <section className={styles.container}>
+        {projects.map((project) => (
+          <Project {...project} key={project.title} />
+        ))}
+      </section>
+    </>
   );
 }

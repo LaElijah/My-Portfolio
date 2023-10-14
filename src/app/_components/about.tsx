@@ -3,7 +3,7 @@ import styles from "@/app/_styles/components/about.module.scss";
 export default function About(): JSX.Element {
   return (
     <>
-      <h2 className={styles.label}>Who am i?</h2>
+      <h2 className="label">Who am i?</h2>
 
       <section className={styles.container}>
         <div>Some image</div>
