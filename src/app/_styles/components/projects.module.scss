@@ -1,6 +1,5 @@
 @use "@/variables";
 
-
 .container {
-    @include variables.CardGrid;
+  @include variables.CardGrid;
 }

@@ -1,21 +1,19 @@
-@use '@/variables';
-
-
+@use "@/variables";
 
 .container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background: variables.$BaseSurfaceS90;;
-    box-shadow: variables.$DefaultBoxShadow;
-    padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: variables.$BaseSurfaceS90;
+  box-shadow: variables.$DefaultBoxShadow;
+  padding: 8px 0;
 }
 
 .wrapper {
-    max-width: 800px;
-    margin: 0 16px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 800px;
+  margin: 0 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

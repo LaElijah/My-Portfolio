@@ -1,91 +1,141 @@
-import styles from '@/app/_styles/components/hero.module.scss';
+import styles from "@/app/_styles/components/hero.module.scss";
 import Link from "next/link";
-import { Tooltip } from '@mantine/core';
+import { Tooltip } from "@mantine/core";
 import {
-    IconBrandGithub,
-    IconBrandLinkedin,
-    IconFileCode,
-    IconBrandDiscord
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconFileCode,
+  IconBrandDiscord,
+  IconBrandReact,
+  IconBrandNodejs,
+  IconBrandSass,
+  IconBrandNextjs,
+  IconBrandMongodb,
+} from "@tabler/icons-react";
 
-} from '@tabler/icons-react';
-
+export function PrimarySkill({ logo, label }: PrimarySkill) {
+  return (
+    <div key={label} className={styles.primarySkill}>
+      {logo}
+      <h3>{label}</h3>
+    </div>
+  );
+}
 
 export default function Hero(): JSX.Element {
+  const iconSize = {
+    width: 32,
+    height: 32,
+  };
 
-    const iconSize = {
-        width: 32,
-        height: 32
-    }
+  // const iconFormat = ( isMobile
+  //     ? {
+  //     width: 64,
+  //     height: 64
+  // }
+  // : {
+  //     width: 128,
+  //     height: 128
 
-    return (
-        <section className={styles.container}>
+  // })
 
+  const logoFormat = {
+    width: 48,
+    height: 48,
+  };
 
-            <div className={styles.hook}>
+  const primarySkills: PrimarySkill[] = [
+    {
+      logo: <IconBrandReact {...logoFormat} />,
+      label: "React",
+    },
 
+    {
+      logo: <IconBrandSass {...logoFormat} />,
+      label: "SCSS",
+    },
 
-                <div className={styles.details}>
+    {
+      logo: <IconBrandNextjs {...logoFormat} />,
+      label: "NextJS",
+    },
 
-                    <h2>Hi! my name is,</h2>
-                    <h1>Elijah Allotey,</h1>
-                    <h3>Im a web developer! I use my skills to make creative solutions to problems.</h3>
+    {
+      logo: <IconBrandNodejs {...logoFormat} />,
+      label: "NodeJS",
+    },
 
-                    <Link href="/contact" className={styles.button}><p>Contact me</p></Link>
+    {
+      logo: <IconBrandMongodb {...logoFormat} />,
+      label: "MongoDB",
+    },
+  ];
 
-                    <div className={styles.socials}>
+  const socials: Social[] = [
+    {
+      label: "Github",
+      link: "/contact",
+      icon: <IconBrandGithub {...iconSize} />,
+    },
+    {
+      label: "LinkedIn",
+      link: "/contact",
+      icon: <IconBrandLinkedin {...iconSize} />,
+    },
+    {
+      label: "Discord",
+      link: "/contact",
+      icon: <IconBrandDiscord {...iconSize} />,
+    },
+    {
+      label: "Resume",
+      link: "/contact",
+      icon: <IconFileCode {...iconSize} />,
+    },
+  ];
 
+  return (
+    <>
+      <section className={styles.container}>
+        <div className={styles.hook}>
+          <div className={styles.details}>
+            <h2>Hi! my name is,</h2>
+            <h1>Elijah Allotey,</h1>
+            <h3>
+              Im a web developer! I use my skills to make creative solutions to
+              problems.
+            </h3>
 
-                        <Tooltip
-                            label="Github"
-                        >
-                            <a href="/contact" >
-                                <IconBrandGithub {...iconSize} />
-                            </a>
-                        </Tooltip>
+            <Link href="/contact" className={styles.button}>
+              <p>Contact me</p>
+            </Link>
 
-                        <Tooltip
-                            label="Linkedin"
-                        >
-                            <a href="/contact" >
-                                <IconBrandLinkedin {...iconSize} />
-                            </a>
-                        </Tooltip>
-
-                        <Tooltip
-                            label="Discord"
-                        >
-                            <a href="/contact" >
-                                <IconBrandDiscord {...iconSize} />
-                            </a>
-                        </Tooltip>
-
-                        <Tooltip
-                            label="Resume"
-                        >
-                            <a href="/contact" >
-                                <IconFileCode {...iconSize} />
-                            </a>
-                        </Tooltip>
-
-                    </div>
-
-                </div>
-
-
-
+            <div className={styles.socials}>
+              {socials.map(({ label, link, icon }: Social) => (
+                <Tooltip key="label" label={label}>
+                  <Link href={link}>{icon}</Link>
+                </Tooltip>
+              ))}
             </div>
+          </div>
+        </div>
 
-            <div className={styles.media}>
+        <div className={styles.media}>
+          <div className={styles.image}>
+            <img alt="Portrait art" src={"/assets/bust.png"} />
+          </div>
+        </div>
+      </section>
 
+      <footer>
+        <h2>My favorite tech</h2>
 
-                <div className={styles.image}>
-
-                    <img src={"/assets/bust.png"} />
-
-                </div>
-
-            </div>
-
-        </section>
-    )
+        <div className={styles.primarySkillsGroup}>
+          {primarySkills.map((skill: PrimarySkill) => {
+            return <PrimarySkill {...skill} key={skill.label} />;
+          })}
+        </div>
+      </footer>
+    </>
+  );
 }

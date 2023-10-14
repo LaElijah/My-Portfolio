@@ -1,101 +1,31 @@
+import styles from "@/app/_styles/components/skills.module.scss";
 
-import styles from "@/app/_styles/components/skills.module.scss"
-import {
-    IconBrandReact,
-    IconBrandNodejs,
-    IconBrandSass,
-    IconBrandNextjs,
-    IconBrandMongodb,
+export default function About(): JSX.Element {
+  return (
+    <section className={styles.container}>
+      <div>skills</div>
 
-} from "@tabler/icons-react"
+      <div>
+        <h2>Who am i?</h2>
 
+        <h3>
+          I&apos;m a creative fullstack web developer, my passion lies in
+          creating things. I try to relate every hobby I have into creating
+          something I can look back on, this is why I chose programming as my
+          career path. My personal hobbies include but are not limited to:
+          crocheting, baking, and making music. I like the feeling that seeing
+          the product of my progressing craft gives me.
+        </h3>
 
-
-export function PrimarySkill({ logo, label }: PrimarySkill) {
-
-    return (
-        <div
-            key={label}
-            className={styles.primarySkill}
-        >
-            {logo}
-            <h3>{label}</h3>
-        </div>
-    )
-}
-export default function Skills(): JSX.Element {
-
-    // const iconFormat = ( isMobile 
-    //     ? {
-    //     width: 64,
-    //     height: 64
-    // }
-    // : {
-    //     width: 128,
-    //     height: 128
-
-    // })
-
-    const logoFormat = {
-        width: 64,
-        height: 64
-    }
-
-
-    const primarySkills: PrimarySkill[] = [
-
-        {
-            logo: <IconBrandReact {...logoFormat} />,
-            label: "React"
-        },
-
-        {
-            logo: <IconBrandSass {...logoFormat} />,
-            label: "SCSS"
-        },
-
-        {
-            logo: <IconBrandNextjs {...logoFormat}/>,
-            label: "NextJS"
-        },
-
-        {
-            logo: <IconBrandNodejs {...logoFormat}/>,
-            label: "NodeJS / ExpressJS"
-        },
-
-
-        {
-            logo: <IconBrandMongodb {...logoFormat}/>,
-            label: "MongoDB"
-        },
-    ]
-
-    
-
-    return (
-        <section className={styles.container}>
-
-            <header className={styles.primarySkillsGroup} >
-                {primarySkills.map((skill: PrimarySkill) => {
-                    return <PrimarySkill {...skill} key={skill.label} />
-                })}
-            </header>
-
-            <main className={styles.about}>
-                <h3>Who </h3>
-
-                <div>
-                    about
-                </div>
-
-                <div>
-                    skills
-                </div>
-            </main>
-
-
-
-        </section>
-    )
+        <h3>
+          I&apos;m looking for job and mentorship oppurtunities in the web
+          developer field. I&apos;m especially interested in community projects,
+          and projects that involve a user base. Im interested in any
+          oppurtunity that allows me to expand my repertoire. If you&apos;re a
+          potential client for a freelance project,{" "}
+          <span className={styles.clickMe}>click here</span> to get in touch.
+        </h3>
+      </div>
+    </section>
+  );
 }

@@ -1,17 +1,16 @@
-@use '@/variables';
-
+@use "@/variables";
 
 .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .container > img {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .container h3 {
-    margin: 0;
-    @include variables.H3SemiBold;
-    // TODO: Add a unique color for name tag 
+  margin: 0;
+  @include variables.H3SemiBold;
+  // TODO: Add a unique color for name tag
 }

@@ -1,3 +1,5 @@
-@use '@/variables';
+@use "@/variables";
 
-.content { @include variables.DefaultContent; }
+.content {
+  @include variables.DefaultContent;
+}

@@ -1,23 +1,19 @@
-@use '@/variables';
+@use "@/variables";
 
-
-
-@mixin PrimaryDisplayH1 { @include variables.H2SemiBold }
-
-
+@mixin PrimaryDisplayH1 {
+  @include variables.H2SemiBold;
+}
 
 .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .temp {
-    width: 80%;
-    text-align: center;
-    @include PrimaryDisplayH1;
-
-    
+  width: 80%;
+  text-align: center;
+  @include PrimaryDisplayH1;
 }

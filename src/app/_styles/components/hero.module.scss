@@ -1,141 +1,139 @@
 @use "@/variables";
 
-
-
 .container {
-    padding: 64px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 64px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 .hook {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 400px;
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
 }
 
-
 .details {
+  & h1 {
+    @include variables.D1SemiBold;
+    color: variables.$PrimaryGreen;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
 
+  & h2 {
+    @include variables.H2SemiBold;
+    padding-left: 2px;
+    font-weight: 400;
+  }
 
-    & h1 {
-        @include variables.D1SemiBold;
-        color: variables.$PrimaryGreen;
-        font-weight: 700;
-        margin-bottom: 16px;
-    }
-
-    & h2 {
-        @include variables.H2SemiBold;
-        font-size: 24px;
-        padding-left: 2px;
-        font-weight: 400;
-    }
-
-    & h3 {
-        @include variables.H3SemiBold;
-        font-weight: 400;
-        padding: 2px;
-        margin-bottom: 32px;
-    }
+  & h3 {
+    @include variables.H3SemiBold;
+    font-weight: 400;
+    padding: 2px;
+    margin-bottom: 32px;
+  }
 }
 
 .button {
-    @include variables.defaultButton;
+  @include variables.defaultButton;
 }
 
 .button:hover {
-    background-color: black;
+  background-color: black;
 }
-
 
 .button:active {
-    background-color: variables.$ActiveButton;
-    color: black;
+  background-color: variables.$ActiveButton;
+  color: black;
 }
-
-
 
 .socials {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    width: 100%;
-    margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  margin-top: 16px;
 
+  & a {
+    color: black;
 
-    & a {
-        color: black;
-
-        & :hover {
-            color: variables.$PrimaryGreen;
-        }
+    & :hover {
+      color: variables.$PrimaryGreen;
     }
-
+  }
 }
-
-
 
 .media {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-
-
 
 .image {
-    background-color: variables.$SecondaryBackground;
-    border-radius: 192px 192px 192px 192px;
-    padding-left: 16px;
-    max-width: 800px;
-    width: 64%;
+  background-color: variables.$SecondaryBackground;
+  border-radius: 192px 192px 192px 192px;
+  padding-left: 16px;
+  max-width: 800px;
+  width: 64%;
 
-
-    & img {
-        width: 100%
-    }
+  & img {
+    width: 100%;
+  }
 }
-
-
-
-
-
-
 
 @media (max-width: 343px) {
-    .details h1 {
-        font-size: 40px;
-    }
+  .details h1 {
+    font-size: 40px;
+  }
 }
 
-
 @media (max-width: 599px) {
-    .hook {
-        margin-bottom: 16px;
-    }
+  .hook {
+    margin-bottom: 16px;
+  }
 
-    .container {
-        padding: 0;
-    }
+  .container {
+    padding: 0;
+  }
 }
 
 @media (min-width: 600px) {
+  .hook {
+    align-items: flex-start;
+  }
 
-    .hook {
-        align-items: flex-start;
-    }
+  .container {
+    flex-direction: row;
+  }
 
-    .container {
-        flex-direction: row;
-    }
+  .image {
+    width: 72%;
+  }
+}
 
-    .image {
-        width: 72%;
-    }
+.primarySkill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 104px;
 
+  & > h3 {
+    color: blue;
+  }
+}
+
+.primarySkillsGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .primarySkillsGroup {
+    justify-content: center;
+    max-width: 400px;
+  }
 }

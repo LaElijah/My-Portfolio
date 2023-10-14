@@ -1,25 +1,16 @@
-@use '@/variables';
-
+@use "@/variables";
 
 .activeLink {
-    @include variables.ActiveLink;
+  @include variables.ActiveLink;
 }
 
 .link {
-    @include variables.Link
+  @include variables.Link;
 }
-
-
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-
-
-
-
-
-
