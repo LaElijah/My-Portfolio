@@ -387,3 +387,23 @@ $ButtonOutline: #FDFDE6;
     }
 
 }
+
+@mixin DefaultPill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: blue;
+    max-width: fit-content;
+    border-radius: 64px;
+    padding: 4px 12px;
+    color: white;
+
+
+    & > :first-child {
+        margin-right: 8px;
+    }
+    & h3 {
+        color: white;
+    }
+
+}

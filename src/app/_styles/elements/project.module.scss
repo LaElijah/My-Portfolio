@@ -1,34 +1,43 @@
+@use "@/variables";
+
+
+
+
 .container {
     width: 100%;
     max-width: 320px;
-    border: 2px solid blue;
+    // border: 2px solid blue;
     margin-bottom: 32px;
 
     & img {
         width: 100%;
+        border: 2px solid black;
+        background-color: black;
     }
 
 
     & h2 {
-        color: red;
+        @include variables.H2SemiBold;
     }
 
     & h3 {
-        color: green;
+        @include variables.H3SemiBold;
     }
 
     
 }
 
-.tool {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
-    & > :first-child {
-        margin-left: 8px;
-    }
+
+
+.tool {
+
+    @include variables.DefaultPill;
+   
+    background-color: blue;
+    color: white;
+
     & h3 {
-        color: blue;
+        color: white;
     }
 }
