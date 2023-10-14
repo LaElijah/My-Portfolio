@@ -127,7 +127,7 @@ export default function Hero(): JSX.Element {
         </div>
       </section>
 
-      <footer>
+      <footer className={styles.footer}>
         <h2>My favorite tech</h2>
 
         <div className={styles.primarySkillsGroup}>

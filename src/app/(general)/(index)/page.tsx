@@ -1,7 +1,8 @@
 import Hero from "@/app/_components/hero";
-import About from "@/app/_components/skills";
+import About from "@/app/_components/about";
 import Projects from "@/app/_components/projects";
 import styles from "@/app/_styles/pages/index.module.scss";
+import Contact from "@/app/_components/contact";
 
 export default async function Index() {
   return (
@@ -9,6 +10,7 @@ export default async function Index() {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </div>
   );
 }
