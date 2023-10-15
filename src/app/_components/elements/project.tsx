@@ -16,14 +16,16 @@ export default function Project({
 
       <h3>{details}</h3>
 
-      {tools.map(({ label, icon }: Tool): JSX.Element => {
-        return (
-          <div className={styles.tool} key={label}>
-            {icon}
-            <h3>{label}</h3>
-          </div>
-        );
-      })}
+      <div className={styles.tools}>
+        {tools.map(({ label, icon }: Tool): JSX.Element => {
+          return (
+            <div className={styles.tool} key={label}>
+              {icon}
+              <h3>{label}</h3>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

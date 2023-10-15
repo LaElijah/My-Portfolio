@@ -1,0 +1,21 @@
+@use "@/variables";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: variables.$PrimaryBackground;
+  padding: 16px;
+
+  & > :first-child {
+    width: 100%;
+    color: blue;
+  }
+
+  & > :last-child {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid variables.$SecondaryBackground;
+    padding: 0px 16px;
+    margin-left: 16px;
+  }
+}

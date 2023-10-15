@@ -19,7 +19,8 @@
   & h1 {
     @include variables.D1SemiBold;
     color: variables.$PrimaryGreen;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 800;
     margin-bottom: 16px;
   }
 

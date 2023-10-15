@@ -28,7 +28,7 @@ export default function ProjectGrid() {
   const projects: ProjectItem[] = [
     {
       title: "JoinIt",
-      image: "/assets/avatar.png",
+      image: "/assets/covers/Logo_Full_Background.jpg",
       details:
         "JoinIt is a website built to facilitate resource redistribution and organization. Features include live messaging, authorized profiles, role assignation etc.",
       alt: "Join it cver image",
@@ -61,7 +61,7 @@ export default function ProjectGrid() {
     },
     {
       title: "Kens Driving",
-      image: "/assets/avatar.png",
+      image: "/assets/covers/Logo_Full_Background.jpg",
       details:
         "This website is a revamped version of a local businesses older website with additional features like an admin background, and submission managment.",
       alt: "Kens driving cover image",
@@ -82,7 +82,7 @@ export default function ProjectGrid() {
     },
     {
       title: "Is It Really Warmer This Winter? (IIRWTW)",
-      image: "/assets/avatar.png",
+      image: "/assets/covers/Logo_Full_Background.jpg",
       details:
         "IIRWTW is a website built to demonstrate the active change in climate across the globe.",
       alt: "IIRWTW cover image",

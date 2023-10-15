@@ -10,7 +10,8 @@ type Link = {
 export default function Footer({ links }: { links: Link[] }): JSX.Element {
   return (
     <section className={styles.container}>
-      Heres my footer
+      <div className={styles.details}>Heres my footer</div>
+
       <div className={styles.links}>
         {links.map(({ link, label, key }: Link) => (
           <Link key={link} href={link}>

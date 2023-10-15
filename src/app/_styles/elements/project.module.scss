@@ -9,7 +9,7 @@
   & img {
     width: 100%;
     border: 2px solid black;
-    background-color: black;
+    background-color: #004aad;
   }
 
   & h2 {
@@ -23,15 +23,26 @@
     font-weight: 400;
     margin-bottom: 12px;
     padding-bottom: 4px;
-    border-bottom: 1px solid black;
   }
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .tool {
   @include variables.DefaultPill;
-
+  margin-bottom: 8px;
+  margin-right: 8px;
   background-color: variables.$PrimaryGreen;
   color: white;
+
+  & svg {
+    width: 24px;
+    height: 24px;
+  }
 
   & h3 {
     color: white;
