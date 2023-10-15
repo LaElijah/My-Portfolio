@@ -9,6 +9,12 @@ type PrimarySkill = {
   label: string;
 };
 
+type Section = {
+  page: JSX.Element;
+  className?: string;
+  key: number | string;
+};
+
 type Social = {
   label: string;
   link: string;

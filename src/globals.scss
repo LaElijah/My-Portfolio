@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+.content {
+  @include variables.DefaultContent;
+}
+
 .label {
   padding-top: 64px;
   padding-bottom: 32px;
@@ -14,7 +18,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url("/assets/grid.svg");
+  background-image: url("/assets/grid.jpg");
 }
 
 h2 {
