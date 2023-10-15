@@ -22,6 +22,7 @@ export default async function Index() {
     },
     {
       page: <Contact />,
+      className: styles.contact,
       key: 3,
     },
   ];

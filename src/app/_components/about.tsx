@@ -1,8 +1,9 @@
 import styles from "@/app/_styles/components/about.module.scss";
+import MotionRenderer from "./elements/motionRenderer";
 
 export default function About(): JSX.Element {
   return (
-    <>
+    <MotionRenderer whileHover={{ scale: 1.1 }}>
       <h2 className="label">Who am i?</h2>
 
       <section className={styles.container}>
@@ -28,6 +29,6 @@ export default function About(): JSX.Element {
           </h3>
         </div>
       </section>
-    </>
+    </MotionRenderer>
   );
 }
