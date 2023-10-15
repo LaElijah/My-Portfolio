@@ -1,6 +1,7 @@
 import styles from "@/app/_styles/components/hero.module.scss";
 import Link from "next/link";
 import { Tooltip } from "@mantine/core";
+
 import {
   IconBrandGithub,
   IconBrandLinkedin,
@@ -13,7 +14,7 @@ import {
   IconBrandMongodb,
 } from "@tabler/icons-react";
 
-export function PrimarySkill({ logo, label }: PrimarySkill) {
+export async function PrimarySkill({ logo, label }: PrimarySkill) {
   return (
     <div key={label} className={styles.primarySkill}>
       {logo}
@@ -22,7 +23,7 @@ export function PrimarySkill({ logo, label }: PrimarySkill) {
   );
 }
 
-export default function Hero(): JSX.Element {
+export default async function Hero(): Promise<JSX.Element> {
   const iconSize = {
     width: 32,
     height: 32,
