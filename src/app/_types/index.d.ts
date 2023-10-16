@@ -26,6 +26,21 @@ type Tool = {
   icon: JSX.Element;
 };
 
+type Tool = {
+  label: string;
+  icon: JSX.Element;
+};
+
+interface ProjectItem {
+  title: string;
+  image: string;
+  details: string;
+  alt: string;
+  tools: Tool[];
+  favorite?: boolean;
+  className?: string;
+}
+
 interface ProjectItem {
   title: string;
   image: string;

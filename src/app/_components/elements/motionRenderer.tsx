@@ -1,21 +1,27 @@
 "use client";
 import { motion, AnimatePresence, AnimatePresenceProps } from "framer-motion";
 
-type CommonProps = any;
 
-type MotionRendererProps = CommonProps & {
+
+type MotionRendererProps = {
   children: JSX.Element | JSX.Element[];
-  animatePresence?: AnimatePresenceProps;
-};
+  animatePresence?: boolean;
+  isVisible?: boolean;
+  
+} & any
+
+
+
 export default function MotionRenderer({
   children,
   animatePresence,
+  isVisible,
   ...options
 }: MotionRendererProps) {
   if (animatePresence) {
     return (
-      <AnimatePresence {...animatePresence}>
-        <motion.div {...options}>{children}</motion.div>
+      <AnimatePresence>
+        { isVisible && (<motion.div {...options}>{children}</motion.div>)}
       </AnimatePresence>
     );
   } else {
