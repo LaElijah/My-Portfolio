@@ -1,5 +1,17 @@
 Simple Animations 
 
+main elements that define an animation
+
+initial state: Where/How is my element at 
+the beginning
+
+Target state: Where it needs to go or
+which shape ot needs to take by the end
+
+Transition state: How its going to transition 
+from the initial state to the end state
+
+
 Most animations performed with motion component and animate prop
 
 Props:
