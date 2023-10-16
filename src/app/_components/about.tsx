@@ -17,7 +17,7 @@ export default function About(): JSX.Element {
       </div> 
        <MotionRenderer
       initial={{ y: 80, opacity: 0.5 }}
-      transition={{ delay: 0.1 }}
+      transition={{ delay: 0.001 }}
       whileInView={{ y: 0, opacity: 1 }}
     > 
           <h3>
