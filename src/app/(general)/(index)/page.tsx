@@ -18,7 +18,7 @@ export default async function Index() {
     },
     {
       page: <ProjectStack />,
-      className: styles.projectStack,
+      customContentBox: true,
       key: 2,
     },
     {

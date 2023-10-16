@@ -1,15 +1,20 @@
 import "@/globals.scss";
-import { ReactPortal } from "react";
 
 export default function Content({
   children,
   className: styles,
+  customContentBox = false,
 }: {
-  children: JSX.Element | JSX.Element[]; // TODO: Edit type for this 
+  children: JSX.Element | JSX.Element[]; // TODO: Edit type for this
   className?: string;
+  customContentBox?: boolean;
 }): JSX.Element {
   return (
-    <section className={`content ${styles ? styles : ""}`}>
+    <section
+      className={`${!customContentBox ? `content` : ``} ${
+        styles ? styles : ""
+      }`}
+    >
       <div>{children}</div>
     </section>
   );
