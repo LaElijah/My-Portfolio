@@ -1,3 +1,5 @@
+@use "@/variables";
+
 .container {
   padding-bottom: 64px;
   display: flex;
@@ -42,4 +44,42 @@
       }
     }
   }
+}
+
+
+
+
+.primarySkill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 104px;
+
+  & > h3 {
+    color: variables.$PrimaryGreen;
+  }
+}
+
+.primarySkillsGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .primarySkillsGroup {
+    max-width: 400px;
+  }
+
+  .primarySkillsWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.header h2 {
+  padding-bottom: 32px;
+  margin-top: 16px;
 }

@@ -14,11 +14,11 @@ export default async function Index() {
     {
       page: <About />,
       className: styles.about,
-      key: 0,
+      key: 1,
     },
     {
       page: <ProjectStack />,
-      customContentBox: true,
+      className: styles.projectStack,
       key: 2,
     },
     {
@@ -30,8 +30,8 @@ export default async function Index() {
 
   return (
     <div className={styles.container}>
-      {sections.map(({ page, key, className }: Section) => (
-        <Content className={className} key={key}>
+      {sections.map(({ page, key, ...props }: Section) => (
+        <Content key={key} {...props}>
           {page}
         </Content>
       ))}

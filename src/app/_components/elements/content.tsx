@@ -11,7 +11,7 @@ export default function Content({
 }): JSX.Element {
   return (
     <section
-      className={`${!customContentBox ? `content` : ``} ${
+      className={`${customContentBox ? `` : `content`} ${
         styles ? styles : ""
       }`}
     >

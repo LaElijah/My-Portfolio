@@ -6,7 +6,9 @@ import Content from "@/app/_components/elements/content";
 export default function Project() {
   return (
     <div className={styles.container}>
-      <ProjectStack />
+      <Content>
+       <ProjectStack />
+        </Content>
 
       <Content>
         <ProjectGrid />

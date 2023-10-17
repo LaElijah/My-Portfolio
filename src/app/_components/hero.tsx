@@ -7,21 +7,8 @@ import {
   IconBrandLinkedin,
   IconFileCode,
   IconBrandDiscord,
-  IconBrandReact,
-  IconBrandNodejs,
-  IconBrandSass,
-  IconBrandNextjs,
-  IconBrandMongodb,
 } from "@tabler/icons-react";
 
-export async function PrimarySkill({ logo, label }: PrimarySkill) {
-  return (
-    <div key={label} className={styles.primarySkill}>
-      {logo}
-      <h3>{label}</h3>
-    </div>
-  );
-}
 
 export default async function Hero(): Promise<JSX.Element> {
   const iconSize = {
@@ -45,32 +32,7 @@ export default async function Hero(): Promise<JSX.Element> {
     height: 48,
   };
 
-  const primarySkills: PrimarySkill[] = [
-    {
-      logo: <IconBrandReact {...logoFormat} />,
-      label: "React",
-    },
 
-    {
-      logo: <IconBrandSass {...logoFormat} />,
-      label: "SCSS",
-    },
-
-    {
-      logo: <IconBrandNextjs {...logoFormat} />,
-      label: "NextJS",
-    },
-
-    {
-      logo: <IconBrandNodejs {...logoFormat} />,
-      label: "NodeJS",
-    },
-
-    {
-      logo: <IconBrandMongodb {...logoFormat} />,
-      label: "MongoDB",
-    },
-  ];
 
   const socials: Social[] = [
     {
@@ -96,7 +58,6 @@ export default async function Hero(): Promise<JSX.Element> {
   ];
 
   return (
-    <>
       <section className={styles.container}>
         <div className={styles.hook}>
           <div className={styles.details}>
@@ -127,18 +88,5 @@ export default async function Hero(): Promise<JSX.Element> {
           </div>
         </div>
       </section>
-
-      <footer className={styles.footer}>
-        <h2>My favorite tech_</h2>
-
-        <div className={styles.primarySkillsWrapper}>
-          <div className={styles.primarySkillsGroup}>
-            {primarySkills.map((skill: PrimarySkill) => {
-              return <PrimarySkill {...skill} key={skill.label} />;
-            })}
-          </div>
-        </div>
-      </footer>
-    </>
   );
 }

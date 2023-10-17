@@ -8,15 +8,17 @@ import {
   IconBrandSass,
 } from "@tabler/icons-react";
 import { DiRedis } from "react-icons/di";
+import styles from "@/app/_styles/components/projectStack.module.scss"
 
 export const projects: ProjectItem[] = [
   {
+    className: styles.joinIt,
     favorite: true,
     title: "JoinIt",
     image: "/assets/covers/Logo_Full_Background.jpg",
     details:
       "JoinIt is a website built to facilitate resource redistribution and organization. Features include live messaging, authorized profiles, role assignation etc.",
-    alt: "Join it cver image",
+    alt: "Join it cover image",
     tools: [
       {
         label: "NextJS",
@@ -45,6 +47,7 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
+    className: styles.kensDriving,
     favorite: true,
     title: "Kens Driving",
     image: "/assets/covers/Logo_Full_Background.jpg",
@@ -67,6 +70,7 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
+    className: styles.iirwtw,
     favorite: true,
     title: "Is It Really Warmer This Winter? (IIRWTW)",
     image: "/assets/covers/Logo_Full_Background.jpg",

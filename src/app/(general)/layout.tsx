@@ -1,4 +1,3 @@
-import styles from "@/app/_styles/layout/root.module.scss";
 import InConstruction from "../temp/temp";
 import "@mantine/core/styles.css";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
@@ -28,7 +27,7 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
 
-      <body className={styles.page}>
+      <body>
         <MantineProvider>
           {process.env.BUILD === "development" && (
             <>

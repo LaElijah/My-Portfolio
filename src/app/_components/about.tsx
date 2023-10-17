@@ -1,10 +1,74 @@
 import styles from "@/app/_styles/components/about.module.scss";
 import MotionRenderer from "./elements/motionRenderer";
 import Image from "next/image";
+import {
+  IconBrandReact,
+  IconBrandNodejs,
+  IconBrandSass,
+  IconBrandNextjs,
+  IconBrandMongodb,
+} from "@tabler/icons-react";
+
+export async function PrimarySkill({ logo, label }: PrimarySkill) {
+  return (
+    <div key={label} className={styles.primarySkill}>
+      {logo}
+      <h3>{label}</h3>
+    </div>
+  );
+}
 
 export default function About(): JSX.Element {
+    const logoFormat = {
+    width: 48,
+    height: 48,
+  };
+
+  const primarySkills: PrimarySkill[] = [
+    {
+      logo: <IconBrandReact {...logoFormat} />,
+      label: "React",
+    },
+
+    {
+      logo: <IconBrandSass {...logoFormat} />,
+      label: "SCSS",
+    },
+
+    {
+      logo: <IconBrandNextjs {...logoFormat} />,
+      label: "NextJS",
+    },
+
+    {
+      logo: <IconBrandNodejs {...logoFormat} />,
+      label: "NodeJS",
+    },
+
+    {
+      logo: <IconBrandMongodb {...logoFormat} />,
+      label: "MongoDB",
+    },
+  ];
+  
+  
+  
+  
+  
   return (
     <>
+     <header className={styles.header}>
+        <h2>My favorite tech_</h2>
+
+        <div className={styles.primarySkillsWrapper}>
+          <div className={styles.primarySkillsGroup}>
+            {primarySkills.map((skill: PrimarySkill) => {
+              return <PrimarySkill {...skill} key={skill.label} />;
+            })}
+          </div>
+        </div>
+      </header>
+
       <h2 className="label">Who am i?</h2>
 
       <section className={styles.container}>

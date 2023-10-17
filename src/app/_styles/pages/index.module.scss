@@ -1,5 +1,7 @@
+@use "@/variables";
+
 .about {
-  background-color: rgba(0, 128, 0, 0.26);
+  background-color: variables.$SecondaryBackground;
 }
 
 .contact {
@@ -9,5 +11,3 @@
   // TODO: Get rid of this maybe?
 }
 
-.projectStack {
-}
