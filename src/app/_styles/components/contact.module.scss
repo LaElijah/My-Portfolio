@@ -1,0 +1,25 @@
+.container {
+    color: white;
+}
+
+.container main {
+    display: flex;
+
+}
+.container main > :last-child {
+    background-color: white;
+    color: black;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px){
+
+    .container main {
+        flex-direction: column;
+    }
+}
