@@ -1,0 +1,38 @@
+@use "@/variables";
+
+
+.tabGroup {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2px;
+    border-bottom: 2px solid grey;
+
+}
+
+.tab, .activeTab {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+
+ 
+}
+
+.tab:hover, .activeTab:hover {
+    background-color: #79797963;
+    border-bottom: 2px solid variables.$PrimaryGreen;
+}
+
+.activeTab {
+    border-bottom: 2px solid variables.$PrimaryGreen;
+}
+
+.content {
+    margin-top: 8px;
+    padding: 8px;
+    min-height: 200px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+
+    border-bottom-left-radius: 8px;
+}
+

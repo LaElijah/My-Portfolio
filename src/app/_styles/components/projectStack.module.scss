@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
 }
 
 .container > section > main {
@@ -15,18 +16,49 @@
 
 
 .joinIt  {
-    background-color: blue;
-   display: flex;
-   flex-direction: row;
+        padding: 48px 0;
+    display: flex;
+    & > :first-child {
+        width: 40%;
+    }
+
+    & > :last-child {
+        width: 60%;
+    }
+
    
-   align-items: center;
-   justify-content: space-between; 
-   
-   & > :last-child {
-    width: 100%;
-   }
 }
 
+.kensDriving {
+        padding: 48px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 
+      & > :first-child {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 
+    & > :last-child {
+        width: 60%;
+    }
+
+}
+
+.iirwtw {
+        padding: 48px 0;
+    display: flex;
+
+      & > :first-child {
+        width: 40%;
+    }
+
+    & > :last-child {
+        width: 60%;
+    }
+
+}
 

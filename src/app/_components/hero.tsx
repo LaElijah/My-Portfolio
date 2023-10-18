@@ -62,10 +62,10 @@ export default async function Hero(): Promise<JSX.Element> {
         <div className={styles.hook}>
           <div className={styles.details}>
             <h2>Hi! my name is,</h2>
-            <h1>Elijah Allotey,</h1>
+            <h1>Elijah Allotey</h1>
             <h3>
-              Im a web developer! I use my skills to make creative solutions to
-              problems.
+              Developing solutions on the web for your next idea. 
+              Searching for collaborative oppurtunities.
             </h3>
 
             <Link href="#contact" className={styles.button}>
