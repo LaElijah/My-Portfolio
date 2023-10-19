@@ -1,0 +1,25 @@
+@use "@/variables";
+
+
+
+.description {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+}
+
+.description > :first-child {
+	border-bottom: 2px solid variables.$PrimaryGreen;
+	margin-bottom: 16px;
+	padding-bottom: 32px;
+	max-height: 100px;
+	height: 100%;
+}
+
+.description > :last-child {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+

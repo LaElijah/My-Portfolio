@@ -1,4 +1,4 @@
-.container > section {
+.container>section {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,7 +7,7 @@
 
 }
 
-.container > section > main {
+.container>section>main {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -15,50 +15,71 @@
 }
 
 
-.joinIt  {
-        padding: 48px 0;
+.joinIt {
+    padding: 48px 0;
     display: flex;
-    & > :first-child {
+    
+    &> :first-child {
         width: 40%;
     }
 
-    & > :last-child {
+    &> :last-child {
         width: 60%;
     }
 
-   
+
 }
 
 .kensDriving {
-        padding: 48px 0;
+    padding: 48px 0;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 
-      & > :first-child {
+    &> :first-child {
         width: 40%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
 
-    & > :last-child {
+    &> :last-child {
         width: 60%;
     }
 
 }
 
 .iirwtw {
-        padding: 48px 0;
+    padding: 48px 0;
     display: flex;
 
-      & > :first-child {
+    &> :first-child {
         width: 40%;
     }
 
-    & > :last-child {
+    &> :last-child {
         width: 60%;
     }
 
 }
 
+
+@media (max-width: 768px) {
+	.joinIt, .kensDriving, .iirwtw {
+		flex-direction: column;
+		gap: 16px;
+		align-items: center;
+
+		& > :first-child {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+
+		& > :last-child {
+			width: 100%;
+		}
+	}
+
+}

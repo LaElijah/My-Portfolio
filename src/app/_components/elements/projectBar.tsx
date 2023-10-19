@@ -1,5 +1,6 @@
 import styles from "@/app/_styles/elements/projectBar.module.scss";
 import Image from "next/image"
+import Pill from "./pill";
 
 
 export default function ProjectBar({
@@ -12,27 +13,35 @@ export default function ProjectBar({
 }: ProjectItem) {
 
   return (
+    <>
+    <h2>{title}</h2>
     
+
     <div className={`${className} ${styles.container}`}>
+           
 
-        <div>
-          <h2>{title}</h2>
-        <Image alt={alt} src={image} height={128} width={128} />
-        </div>
+      <div>
+        <Image alt={alt} src={image} height={200} width={256} />
+      </div>
 
-       
-        <div>
+
+      <div className={styles.description}>
+
+        <section >
           {details}
+        </section>
 
-          {tools.map(({icon, label}) => (
-            <div key={label}>
-              {icon}
-              {label}
-              </div>
+        <section>
+          {tools.map((tool: Tool) => (
+            <Pill key={tool.label} {...tool} />
           ))}
-        </div>
 
-    
+        </section>
+
+      </div>
+
+
     </div>
+    </>
   );
 }

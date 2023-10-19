@@ -1,0 +1,12 @@
+@use "@/variables";
+.container {
+	display: flex;
+	flex-direction: row;
+	background-color: variables.$PrimaryGreen;
+	color: white;
+	align-items: center;
+	border-radius: 160px;
+    width: fit-content;
+    gap: 4px;
+    padding: 4px 8px;
+}

@@ -1,20 +1,27 @@
-import { IconBrandReact } from "@tabler/icons-react"
-
+import { IconBrandReact } from "@tabler/icons-react";
+import Pill from "@/app/_components/elements/pill";
 
 
 export default function TechSkills() {
 
+
+    const logoFormat = {
+        height: 24,
+        width: 24,
+    }
+
+
     const tools: Tool[] = [
         {
             label: "React",
-            icon: <IconBrandReact />
+            icon: <IconBrandReact {...logoFormat} />
         }
     ]
     return (
         <>
 
-            {tools.map(({ icon, label }: Tool) => (
-                <div key={label}>{label}{icon}</div>
+            {tools.map((tool: Tool) => (
+                <Pill key={tool.label} {...tool} />
             ))}
 
         </>

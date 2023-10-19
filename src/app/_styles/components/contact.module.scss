@@ -1,12 +1,26 @@
 .container {
     color: white;
+    width: 100%;
 }
 
-.container main {
+.container >  main {
     display: flex;
+    width: 100%;
+    gap: 128px;
 
 }
-.container main > :last-child {
+
+
+
+.container > main > :first-child {
+    width: 60%;
+}
+
+
+
+
+.container > main > :last-child {
+    width: 40%;
     background-color: white;
     color: black;
     padding: 32px;
@@ -22,4 +36,12 @@
     .container main {
         flex-direction: column;
     }
+
+    .container > main > :first-child, .container > main > :last-child  {
+   	width: 100%;
+    }
+
+    .container > main > :last-child {
+	    max-width: 400px;
+}
 }

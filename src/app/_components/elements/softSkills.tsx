@@ -1,4 +1,5 @@
 import { IconBrandReact } from "@tabler/icons-react"
+import Pill from "./pill"
 
 
 
@@ -12,7 +13,10 @@ import { IconBrandReact } from "@tabler/icons-react"
 
 
 export default function SoftSkills() {
-
+    const logoFormat = {
+        height: 24,
+        width: 24,
+    }
     const tools: Tool[] = [
         {
             label: "React",
@@ -22,8 +26,8 @@ export default function SoftSkills() {
     return (
         <>
 
-            {tools.map(({ icon, label }: Tool) => (
-                <div key={label}>{icon}</div>
+            {tools.map((tool: Tool) => (
+                <Pill key={tool.label} {...tool} />
             ))}
 
         </>
