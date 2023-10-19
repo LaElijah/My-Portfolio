@@ -2,9 +2,9 @@
 
 .wrapper {
   color: white;
+  padding-bottom: 32px;
 }
 .container {
-  padding-bottom: 64px;
   display: flex;
   flex-direction: row;
   & > :first-child {

@@ -27,11 +27,12 @@ export default async function Contact() {
 
   return (
     <div>
-      <LatestPost {...test[0]} />
+     {test &&  <LatestPost {...test[0]} /> }
 
       <section>
-        {test.map((post) => (
-          <BlogPost {...post} />
+        {test && test.map((post: any) => (
+          // Change this 
+          <BlogPost key={post._id } {...post} />
         ))}
       
       </section>

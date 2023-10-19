@@ -10,6 +10,10 @@ import {
 import { DiRedis } from "react-icons/di";
 import styles from "@/app/_styles/components/projectStack.module.scss"
 
+const logoFormat = {
+  width: 24,
+  height: 24
+}
 export const projects: ProjectItem[] = [
   {
     className: styles.joinIt,
@@ -22,27 +26,27 @@ export const projects: ProjectItem[] = [
     tools: [
       {
         label: "NextJS",
-        icon: <IconBrandNextjs />,
+        icon: <IconBrandNextjs {...logoFormat} />,
       },
       {
         label: "MongoDB",
-        icon: <IconBrandMongodb />,
+        icon: <IconBrandMongodb {...logoFormat} />,
       },
       {
         label: "AWS",
-        icon: <IconBrandAws />,
+        icon: <IconBrandAws {...logoFormat} />,
       },
       {
         label: "NodeJS",
-        icon: <IconBrandNodejs />,
+        icon: <IconBrandNodejs {...logoFormat} />,
       },
       {
         label: "Websocket",
-        icon: <IconPlugConnected />,
+        icon: <IconPlugConnected {...logoFormat} />,
       },
       {
         label: "SCSS",
-        icon: <IconBrandSass />,
+        icon: <IconBrandSass {...logoFormat} />,
       },
     ],
   },
@@ -57,15 +61,15 @@ export const projects: ProjectItem[] = [
     tools: [
       {
         label: "NextJS",
-        icon: <IconBrandNextjs />,
+        icon: <IconBrandNextjs {...logoFormat} />,
       },
       {
         label: "MongoDB",
-        icon: <IconBrandMongodb />,
+        icon: <IconBrandMongodb {...logoFormat} />,
       },
       {
         label: "SCSS",
-        icon: <IconBrandSass />,
+        icon: <IconBrandSass {...logoFormat} />,
       },
     ],
   },
@@ -80,11 +84,11 @@ export const projects: ProjectItem[] = [
     tools: [
       {
         label: "React",
-        icon: <IconBrandReact />,
+        icon: <IconBrandReact {...logoFormat} />,
       },
       {
         label: "Redis",
-        icon: <DiRedis />,
+        icon:<DiRedis style={{ width: 24, height: 24}} {...logoFormat} />,
       },
     ],
   },

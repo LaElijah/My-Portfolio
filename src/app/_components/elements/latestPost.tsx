@@ -8,7 +8,7 @@
 
 export default function LatestPost(props: any) {
 
-return (
+return ( 
 <div>
 hey there 
 </div>

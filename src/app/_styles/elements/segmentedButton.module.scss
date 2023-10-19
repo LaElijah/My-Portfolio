@@ -29,6 +29,13 @@
 .content {
     margin-top: 8px;
     padding: 8px;
-    min-height: 200px;
+    min-height: 128px;
+
+    & > section {
+    display: flex;
+    gap: 4px;
+    width: fit-content;
+    flex-wrap: wrap;
+    }
 }
 
