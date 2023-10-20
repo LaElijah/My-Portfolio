@@ -7,7 +7,7 @@ import { MongoClient } from "mongodb"
 export async function POST(req: NextRequest, res: NextResponse) {
      const uri = process.env.MONGO_URI || ""
         const client = new MongoClient(uri)
-        
+
     try {
 
         const { name, email, message } = await req.json()
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         })
     }
     finally {
-        await client.close()
+        // await client.close()
     }
 
 }
