@@ -37,7 +37,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         })
     }
     finally {
-        await client.close()
+        // await client.close()
     }
 
 }
