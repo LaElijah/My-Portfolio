@@ -1,6 +1,6 @@
 import styles from "@/app/_styles/components/contact.module.scss";
-import { IconMail } from "@tabler/icons-react";  
-import MessageInput from "./elements/messageInput"; 
+import { IconMail, IconPhone } from "@tabler/icons-react";
+import MessageInput from "./elements/messageInput";
 
 
 export default function Contact() {
@@ -11,13 +11,16 @@ export default function Contact() {
       <main>
 
         <div>
-          <h3>This is placeholder text, thank you for visiting the site.
-              If youd like to get in contact my email is below or you
-              can send a direct message to the right. 
+          <h3>
+            This is placeholder text, thank you for visiting the site.
+            If youd like to get in contact my email is below or you
+            can send a direct message to the right.
           </h3>
 
-          <section>                                              
-            <div><IconMail/>: Elijah.Allotey.W@gmail.com</div>
+          <section>
+            <div className={styles.socials} ><IconMail />: Elijah.Allotey.W@gmail.com</div>
+            { /*TODO: Replace with google voice */}
+            <div className={styles.socials} ><IconPhone />: 612-501-7047</div>
           </section>
 
 

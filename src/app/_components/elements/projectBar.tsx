@@ -17,11 +17,11 @@ export default function ProjectBar({
     <h2>{title}</h2>
     
 
-    <div className={`${className} ${styles.container}`}>
+    <div className={`${styles.container} ${className} `}>
            
 
       <div>
-        <Image alt={alt} src={image} height={200} width={256} />
+        <Image alt={alt} src={image} height={200} width={300} />
       </div>
 
 
