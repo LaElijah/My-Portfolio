@@ -10,7 +10,7 @@ import {MongoClient} from "mongodb"
 export async function POST(req: NextRequest, res: NextResponse) {
     try {
 
-        const { name, message } = await req.json()
+        const { name, email, message } = await req.json()
        
       
 
@@ -20,6 +20,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         
         console.log(await messages.insertOne({
             name,
+            email,
             message
         }))
 
@@ -29,6 +30,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
     }
     catch (error) {
+        console.log(error)
         return NextResponse.json({
             status: "failure",
             message: "error"
