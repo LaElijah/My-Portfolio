@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from "next/server"
 import {MongoClient} from "mongodb"
 
 
-  const uri = process.env.MONGO_URI || ""
-        const client = new MongoClient(uri, {
+//   const uri = process.env.MONGO_URI || ""
+//         const client = new MongoClient(uri, {
         
-        })
+//         })
 
 export async function POST(req: NextRequest, res: NextResponse) {
     try {
@@ -14,15 +14,15 @@ export async function POST(req: NextRequest, res: NextResponse) {
        
       
 
-        await client.connect()
+        // await client.connect()
         
-        const messages = client.db("data").collection("messages")
+        // const messages = client.db("data").collection("messages")
         
-        console.log(await messages.insertOne({
-            name,
-            email,
-            message
-        }))
+        // console.log(await messages.insertOne({
+        //     name,
+        //     email,
+        //     message
+        // }))
 
         return NextResponse.json({
             status: "success"
