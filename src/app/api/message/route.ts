@@ -5,30 +5,25 @@ import { MongoClient } from "mongodb"
 
 
 export async function POST(req: NextRequest, res: NextResponse) {
-     const uri = process.env.MONGO_URI || ""
-        const client = new MongoClient(uri)
+    const uri = process.env.MONGO_URI || ""
+    const client = new MongoClient(uri)
 
     try {
 
         const { name, email, message } = await req.json()
 
+        // await client.connect()
 
-       
+        // const messages = client.db("data").collection("messages")
 
-
-
-        await client.connect()
-
-        const messages = client.db("data").collection("messages")
-
-        console.log(await messages.insertOne({
-            name,
-            email,
-            message
-        }))
+        // console.log(await messages.insertOne({
+        //     name,
+        //     email,
+        //     message
+        // }))
 
         return NextResponse.json({
-            status: "success"
+            status: uri
         })
 
     }
