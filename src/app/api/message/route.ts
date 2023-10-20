@@ -1,21 +1,26 @@
 import { NextRequest, NextResponse } from "next/server"
-import Message from "@/app/_utils/models/message"
-import dbConnection from "@/app/_utils/db/dbConnection"
+import { MongoClient } from "mongodb"
 
 
-
+const uri = process.env.MONGODB_URI || ""
+const client = new MongoClient(uri)
 
 export async function POST(req: NextRequest, res: NextResponse) {
-    
+   
 
     try {
 
-        await dbConnection()
+        const { name, email, message } = await req.json()
 
+        await client.connect()
 
-        const document = new Message({...await req.json()})
-        await document.save()
+        const messages = client.db("data").collection("messages")
 
+        console.log(await messages.insertOne({
+            name,
+            email,
+            message
+        }))
 
         return NextResponse.json({
             status: "success"
@@ -28,6 +33,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
             status: "failure",
             message: "error"
         })
+    }
+    finally {
+        await client.close()
     }
 
 }
