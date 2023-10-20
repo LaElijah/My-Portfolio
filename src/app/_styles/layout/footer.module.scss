@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  background-color: variables.$PrimaryBackground;
+  background: variables.$BaseSurfaceS90;
   padding: 16px;
   margin-top: 0 !important;
   & > :first-child {

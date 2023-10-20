@@ -12,7 +12,6 @@ type Link = {
 export default function Footer({ links }: { links: Link[] }): JSX.Element {
   return (
     <Content className={styles.container}>
-    <section className={styles.container}>
       
       <div className={styles.details}>Heres my footer</div>
 
@@ -23,7 +22,6 @@ export default function Footer({ links }: { links: Link[] }): JSX.Element {
           </Link>
         ))}
       </div>
-    </section>
     </Content>
   );
 }
