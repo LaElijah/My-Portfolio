@@ -4,7 +4,7 @@ import {MongoClient} from "mongodb"
 import BlogPost from "@/app/_components/elements/blogPost";
 import LatestPost from "@/app/_components/elements/latestPost"
 
-const uri = process.env.MONGO_URI || ""
+const uri = process.env.MONGODB_URI || ""
 
 const client = new MongoClient(uri)
 
