@@ -1,0 +1,21 @@
+.container {
+    & h2 {
+
+    }
+
+    & h3 {
+
+    }
+
+    & a {
+        text-decoration: none;
+    
+    }
+
+}
+
+.text:hover {
+    & h2 {
+        color: grey;
+    }
+}
