@@ -46,9 +46,13 @@ _id }: BlogData) {
 
             <h2>{description}</h2>
 
+            <div className={styles.actions}>
+            {author && ( <Tag />)}
             <Link href={`/blog/${file}`}>Continue reading <IconArrowRight /></Link>
 
-            {author && ( <Tag />)}
+           
+            </div>
+
         </section>
     )
 

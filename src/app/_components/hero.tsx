@@ -74,7 +74,7 @@ export default async function Hero(): Promise<JSX.Element> {
 
             <div className={styles.socials}>
               {socials.map(({ label, link, icon }: Social) => (
-                <Tooltip key="label" label={label}>
+                <Tooltip key={label} label={label}>
                   <Link href={link}>{icon}</Link>
                 </Tooltip>
               ))}

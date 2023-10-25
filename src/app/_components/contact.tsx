@@ -12,9 +12,9 @@ export default function Contact() {
 
         <div>
           <h3>
-            This is placeholder text, thank you for visiting the site.
-            If youd like to get in contact my email is below or you
-            can send a direct message to the right.
+         Thank you for visiting my portfolio! If you're interested and my work and you would like to
+         collaborate on a project, talk about a potential solution, or you're a potential client, send
+         a message through the contact form or my contact methods. 
           </h3>
 
           <section>
@@ -42,10 +42,10 @@ export default function Contact() {
 
 
 
-          <footer>
+          {/* <footer>
             Heres a footer for the card
 
-          </footer>
+          </footer> */}
         </div>
 
       </main>

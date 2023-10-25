@@ -1,16 +1,21 @@
 "use client";
 import { useMediaQuery } from "@mantine/hooks";
 import styles from "@/app/_styles/elements/tabs.module.scss";
-import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 
 export default function LinkTabs({
   links,
 }: {
   links: Link[];
 }): JSX.Element | undefined {
-  const [selected, setSelected] = useState("Home");
+  
+  const pathname = (usePathname()).split('/')[1]
+  const serialzedPath = `${pathname.charAt(0).toUpperCase()}${pathname.split(pathname.charAt(0))[1]}`
+  const selected = (serialzedPath !== "undefined") ? serialzedPath : "Home"
 
+ 
   if (useMediaQuery("(min-width: 769px)")) {
     return (
       <div className={styles.container}>
@@ -18,7 +23,6 @@ export default function LinkTabs({
           href="/"
           className={"Home" === selected ? styles.activeLink : styles.link}
           key={99}
-          onClick={() => setSelected("Home")}
         >
           Home
         </Link>
@@ -28,7 +32,6 @@ export default function LinkTabs({
               href={link}
               className={label === selected ? styles.activeLink : styles.link}
               key={key}
-              onClick={() => setSelected(label)}
             >
               {label}
             </Link>

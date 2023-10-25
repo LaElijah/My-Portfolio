@@ -1,20 +1,40 @@
+@use "@/variables";
+
 .container {
+    border-bottom: 2px solid lightgrey;
+    padding: 16px 0px;
     & h1 {
-
-    }
-
-    & h2 {
-
-    }
-
-    & h3 {
-
-    }
-
+        @include variables.D1SemiBold;
+        color: variables.$PrimaryGreen;
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+    
+      & h2 {
+        @include variables.H2SemiBold;
+        padding-left: 2px;
+        font-weight: 400;
+      }
+    
+      & h3 {
+        @include variables.H3SemiBold;
+        font-weight: 400;
+        padding: 2px;
+        margin-bottom: 8px;
+      }
     & a {
         text-decoration: none;
         display: flex;
         align-items: center;
         gap: 4px;
     }
+}
+
+
+.actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
 }

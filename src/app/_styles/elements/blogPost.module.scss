@@ -1,11 +1,21 @@
+@use "@/variables";
+
 .container {
-    & h2 {
-
-    }
-
-    & h3 {
-
-    }
+    
+   
+    
+      & h2 {
+        @include variables.H2SemiBold;
+        padding-left: 2px;
+        font-weight: 400;
+      }
+    
+      & h3 {
+        @include variables.H3SemiBold;
+        font-weight: 400;
+        padding: 2px;
+        margin: 8px 0;
+      }
 
     & a {
         text-decoration: none;

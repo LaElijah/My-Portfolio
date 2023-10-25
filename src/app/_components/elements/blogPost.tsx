@@ -42,7 +42,7 @@ export default function BlogPost({
             <LinkWrapper href={`/`} className={styles.text}>
                 <h3>{dateString}</h3>
                 <h2>{title}</h2>
-                <h2>{description}</h2>
+                <h3>{description}</h3>
             </LinkWrapper>
 
             {author && (<Tag />)}
