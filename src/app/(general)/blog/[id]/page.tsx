@@ -6,7 +6,7 @@ import styles from "@/app/_styles/pages/post.module.scss"
 
 
 
-export default async function({params}: {params: {id :string}}) {
+export default async function Post({params}: {params: {id :string}}) {
     const storeClient = new FireStoreClient({
         bucket: process.env.AWS_BUCKET || "",
         options: {

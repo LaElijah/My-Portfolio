@@ -31,7 +31,7 @@ const Socials = () => {
     label: "Githu"
   },
 ]
-  return socialLinks.map(({icon, label}) => <Tooltip label={label}>{icon}</Tooltip>)
+  return socialLinks.map(({icon, label}) => <Tooltip key={label} label={label}>{icon}</Tooltip>)
 }
 
 
