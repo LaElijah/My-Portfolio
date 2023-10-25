@@ -12,8 +12,8 @@ export default function Contact() {
 
         <div>
           <h3>
-         Thank you for visiting my portfolio! If you're interested and my work and you would like to
-         collaborate on a project, talk about a potential solution, or you're a potential client, send
+         Thank you for visiting my portfolio! If you&apos;re interested and my work and you would like to
+         collaborate on a project, talk about a potential solution, or you&apos;re a potential client, send
          a message through the contact form or my contact methods. 
           </h3>
 
