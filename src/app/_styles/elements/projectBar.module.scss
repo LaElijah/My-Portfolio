@@ -6,39 +6,73 @@
 	justify-content: space-between;
 	gap: 16px;
 }
+
 .description {
 	display: flex;
 	flex-direction: column;
 	max-width: 520px;
+	gap: 16px;
 
 }
 
-.description > :first-child {
+.description> :first-child {
 	border-bottom: 2px solid variables.$PrimaryGreen;
-	margin-bottom: 16px;
 	padding-bottom: 32px;
 	max-height: 100px;
 	height: 100%;
 }
 
-.description > :last-child {
+.description> :nth-child(2) {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 4px;
 }
 
 
+.description> :last-child {
+	width: 100%;
+	display: flex;
+	gap: 8px;
+
+
+	&>a:first-of-type {
+		@include variables.defaultButton;
+		width: 100%;
+	}
+
+	&>a:last-of-type {
+		@include variables.defaultButton;
+		width: 100%;
+	}
+}
+
+.description> :last-child>a:first-of-type:hover,
+.description> :last-child>a:last-of-type:hover {
+	background-color: black;
+
+}
+
+.description> :last-child>a:first-of-type:active,
+.description> :last-child>a:last-of-type:active {
+	background-color: variables.$ActiveButton;
+	color: black;
+}
+
+
 @media (max-width: 768px) {
-	
-.description > :first-child {
-	max-height: 200px;
+
+	.description> :first-child {
+		max-height: 200px;
+	}
+
+	.description {
+		max-width: 400px;
+	}
 }
 
-.description {
-	max-width: 400px;
+
+@media (max-width: 425px) {
+	.description {
+		max-width: 300px;
+	}
 }
-}
-
-
-@media (max-width: 425px) { .description { max-width: 300px; } }
-

@@ -12,11 +12,4 @@
 
 .wrapper {
     max-width: 800px;
-
-    & > :first-child {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    }
 }
-

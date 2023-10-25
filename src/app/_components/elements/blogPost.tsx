@@ -35,12 +35,12 @@ export default function BlogPost({
     media,
     _id
 }: BlogData) {
-
+    const dateString = new Date(date).toISOString().split('T')[0]
     return (
         <div className={styles.container}>
 
             <LinkWrapper href={`/`} className={styles.text}>
-                <h3>{date}</h3>
+                <h3>{dateString}</h3>
                 <h2>{title}</h2>
                 <h2>{description}</h2>
             </LinkWrapper>

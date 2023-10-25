@@ -1,4 +1,4 @@
-import InConstruction from "../temp/temp";
+
 import "@mantine/core/styles.css";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import Footer from "@/app/_components/layout/footer";
@@ -17,9 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const links: Link[] = [
-    { label: "About", link: "/about", key: 0 },
-    { label: "Projects", link: "/projects", key: 1 },
-    { label: "Blog", link: "/blog", key: 2 },
+    { label: "Projects", link: "/projects", key: 0 },
+    { label: "Blog", link: "/blog", key: 1 },
   ];
 
   return (
@@ -31,14 +30,12 @@ export default function RootLayout({
 
       <body>
         <MantineProvider>
-          {process.env.BUILD === "development" && (
-            <>
+       
               <Navbar links={links} />
               {children}
               <Footer links={links} />
-            </>
-          )}
-          {process.env.BUILD !== "development" && <InConstruction />}
+        
+       
         </MantineProvider>
       </body>
     </html>

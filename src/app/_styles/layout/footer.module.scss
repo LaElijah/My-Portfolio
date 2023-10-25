@@ -1,24 +1,38 @@
 @use "@/variables";
 
 .container {
-  display: flex;
-  flex-direction: row;
+  width: 100%;
   background: variables.$BaseSurfaceS90;
   padding: 16px;
-  margin-top: 0 !important;
-  & > :first-child {
-    width: 100%;
-    color: blue;
-  }
-
-
+  margin: 0 !important;
 }
 
 
-.links {
+
+.wrapper {
   display: flex;
   flex-direction: column;
-  border-left: 1px solid variables.$SecondaryBackground;
-  padding: 0px 16px;
-  margin-left: 16px;
+  gap: 32px;
+
+  & > :first-child {
+    display: flex;
+    width: 100%;
+    color: blue;
+    justify-content: center;
+    gap: 8px;
+
+    & a {
+    text-decoration: none;
+    }
+  }
+
+  & > :last-child {
+    display: flex;
+    width: 100%;
+    color: blue;
+    justify-content: center;
+    gap: 8px;
+  }
+
 }
+

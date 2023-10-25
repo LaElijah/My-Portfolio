@@ -10,7 +10,7 @@ export default function Project() {
        <ProjectStack />
         </Content>
 
-      <Content>
+      <Content className={styles.projectGrid}>
         <ProjectGrid />
       </Content>
     </div>
